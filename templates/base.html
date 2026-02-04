@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title or "PC管理" }}</title>
+  <link rel="stylesheet" href="/assets/app.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="title">PC管理システム</div>
+    {% if request.session.get('display_name') %}
+      <div class="user">こんにちは、{{ request.session.get('display_name') }} さん</div>
+      <form action="/logout" method="post">
+        <button type="submit">ログアウト</button>
+      </form>
+    {% endif %}
+  </header>
+
+  <section class="flash-area">
+    {% for flash in flashes or [] %}
+      <div class="flash flash-{{ flash.level }}">{{ flash.message }}</div>
+    {% endfor %}
+  </section>
+
+  <main class="content">
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

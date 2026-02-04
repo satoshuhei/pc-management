@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="panel">
+  <h1>ログイン</h1>
+  <form action="/login" method="post" class="form">
+    <label>
+      ユーザID
+      <input type="text" name="user_id" maxlength="64" required />
+    </label>
+    <label>
+      パスコード
+      <input type="password" name="passcode" maxlength="128" required />
+    </label>
+    <button type="submit">ログイン</button>
+  </form>
+</div>
+{% endblock %}
