@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>期限超過予定一覧</h1>
-<p>期限超過の予定を表示します。</p>
+<div class="page-header">
+  <div>
+    <h1>期限超過予定一覧</h1>
+    <p>期限超過の予定を表示します。</p>
+    <p class="summary">件数: {{ plans | length }}</p>
+  </div>
+  <div class="actions">
+    <a class="button" href="/plans/new">新規登録</a>
+  </div>
+</div>
 <form method="get" class="form">
   <label>
     担当予定者
@@ -11,8 +19,15 @@
     タイトル
     <input type="text" name="title" value="{{ filters.title }}" />
   </label>
-  <button type="submit">検索</button>
+  <button type="submit" class="button">検索</button>
 </form>
+{% if filters.planned_owner or filters.title %}
+  <div class="filter-summary">
+    検索条件:
+    {% if filters.planned_owner %}担当予定者={{ filters.planned_owner }}{% endif %}
+    {% if filters.title %} タイトル={{ filters.title }}{% endif %}
+  </div>
+{% endif %}
 <table>
   <thead>
     <tr><th>ID</th><th>種別</th><th>対象ID</th><th>タイトル</th><th>予定日</th><th>担当予定者</th><th>操作</th></tr>
@@ -29,7 +44,7 @@
         <td>
           <form method="post" action="/plans/{{ plan.id }}/done">
             <input type="text" name="result_note" placeholder="実績メモ" />
-            <button type="submit">完了</button>
+            <button type="submit" class="button">完了</button>
           </form>
         </td>
       </tr>

@@ -18,7 +18,7 @@
       </nav>
       <div class="user">こんにちは、{{ request.session.get('display_name') }} さん</div>
       <form action="/logout" method="post">
-        <button type="submit">ログアウト</button>
+        <button type="submit" class="button">ログアウト</button>
       </form>
     {% endif %}
   </header>

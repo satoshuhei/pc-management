@@ -2,6 +2,7 @@
     "chat.tools.terminal.autoApprove": {
         "C:/kojin/090_daiku/repos/pc-management/.venv/Scripts/python.exe": true,
         "git config": true,
-        "uvicorn": true
+        "uvicorn": true,
+        "git -C \"c:\\kojin\\090_daiku\\repos\\pc-management\"": true
     }
 }

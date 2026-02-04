@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>{{ title }}</h1>
+    <p>要求情報を入力してください。</p>
+  </div>
+  <div class="actions">
+    <a class="button" href="/requests">一覧に戻る</a>
+  </div>
+</div>
+
+<form method="post" action="{{ action }}" class="form panel">
+  <label>
+    申請者
+    <input type="text" name="requester" maxlength="128" value="{{ request_item.requester or '' }}" />
+  </label>
+  <label>
+    資産ID
+    <input type="number" name="asset_id" value="{{ request_item.asset_id or '' }}" />
+  </label>
+  <label>
+    理由/メモ
+    <textarea name="note" rows="4" maxlength="1000">{{ request_item.note or '' }}</textarea>
+  </label>
+  <div class="form-actions">
+    <button type="submit" class="button">保存</button>
+  </div>
+</form>
+{% endblock %}

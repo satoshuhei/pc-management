@@ -1,6 +1,17 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>資産詳細</h1>
+<div class="page-header">
+  <div>
+    <h1>資産詳細</h1>
+  </div>
+  <div class="actions">
+    <a class="button" href="/assets/{{ asset.id }}/edit">編集</a>
+    <form method="post" action="/assets/{{ asset.id }}/delete" class="inline-form" onsubmit="return confirm('削除しますか？');">
+      <button type="submit" class="button danger">削除</button>
+    </form>
+    <a class="button" href="/assets">一覧に戻る</a>
+  </div>
+</div>
 <table>
   <tbody>
     <tr><th>ID</th><td>{{ asset.id }}</td></tr>

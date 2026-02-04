@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>資産一覧</h1>
-<p>資産の一覧を表示します。</p>
+<div class="page-header">
+  <div>
+    <h1>資産一覧</h1>
+    <p>資産の一覧を表示します。</p>
+    <p class="summary">件数: {{ assets | length }}</p>
+  </div>
+  <div class="actions">
+    <a class="button" href="/assets/new">新規登録</a>
+  </div>
+</div>
 <form method="get" class="form">
   <label>
     ステータス
@@ -11,12 +19,20 @@
     資産タグ
     <input type="text" name="asset_tag" value="{{ filters.asset_tag }}" />
   </label>
-  <label>
+  <button type="submit" class="button">検索</button>
     場所
     <input type="text" name="location" value="{{ filters.location }}" />
   </label>
   <button type="submit">検索</button>
 </form>
+{% if filters.status or filters.asset_tag or filters.location %}
+  <button type="submit" class="button">インポート</button>
+    検索条件:
+    {% if filters.status %}ステータス={{ filters.status }}{% endif %}
+    {% if filters.asset_tag %} 資産タグ={{ filters.asset_tag }}{% endif %}
+    {% if filters.location %} 場所={{ filters.location }}{% endif %}
+  </div>
+{% endif %}
 <form method="post" action="/assets/import" class="form" enctype="multipart/form-data">
   <label>
     インポート（CSV）
@@ -44,7 +60,7 @@
               {% endfor %}
             </select>
             <input type="text" name="reason" placeholder="理由" />
-            <button type="submit">更新</button>
+            <button type="submit" class="button">更新</button>
           </form>
         </td>
       </tr>

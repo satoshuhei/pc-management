@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>要求一覧</h1>
-<p>要求の一覧を表示します。</p>
+<div class="page-header">
+  <div>
+    <h1>要求一覧</h1>
+    <p>要求の一覧を表示します。</p>
+    <p class="summary">件数: {{ requests | length }}</p>
+  </div>
+  <div class="actions">
+    <a class="button" href="/requests/new">新規登録</a>
+  </div>
+</div>
 <form method="get" class="form">
   <label>
     ステータス
@@ -11,8 +19,15 @@
     申請者
     <input type="text" name="requester" value="{{ filters.requester }}" />
   </label>
-  <button type="submit">検索</button>
+  <button type="submit" class="button">検索</button>
 </form>
+{% if filters.status or filters.requester %}
+  <div class="filter-summary">
+    検索条件:
+    {% if filters.status %}ステータス={{ filters.status }}{% endif %}
+    {% if filters.requester %} 申請者={{ filters.requester }}{% endif %}
+  </div>
+{% endif %}
 <table>
   <thead>
     <tr><th>ID</th><th>ステータス</th><th>申請者</th><th>資産ID</th><th>状態遷移</th></tr>
@@ -32,7 +47,7 @@
               {% endfor %}
             </select>
             <input type="text" name="reason" placeholder="理由" />
-            <button type="submit">更新</button>
+            <button type="submit" class="button">更新</button>
           </form>
         </td>
       </tr>

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>{{ title }}</h1>
+    <p>資産情報を入力してください。</p>
+  </div>
+  <div class="actions">
+    <a class="button" href="/assets">一覧に戻る</a>
+  </div>
+</div>
+
+<form method="post" action="{{ action }}" class="form panel">
+  <label>
+    資産タグ
+    <input type="text" name="asset_tag" maxlength="50" required value="{{ asset.asset_tag }}" />
+  </label>
+  <label>
+    シリアル
+    <input type="text" name="serial_no" maxlength="128" value="{{ asset.serial_no or '' }}" />
+  </label>
+  <label>
+    ホスト名
+    <input type="text" name="hostname" maxlength="63" value="{{ asset.hostname or '' }}" />
+  </label>
+  <label>
+    状態
+    <select name="status" required>
+      {% for status in statuses %}
+        <option value="{{ status }}" {% if asset.status.value == status %}selected{% endif %}>{{ status }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>
+    利用者
+    <input type="text" name="current_user" maxlength="128" value="{{ asset.current_user or '' }}" />
+  </label>
+  <label>
+    場所
+    <input type="text" name="location" maxlength="128" value="{{ asset.location or '' }}" />
+  </label>
+  <label>
+    メモ
+    <textarea name="notes" rows="4" maxlength="5000">{{ asset.notes or '' }}</textarea>
+  </label>
+  <div class="form-actions">
+    <button type="submit" class="button">保存</button>
+  </div>
+</form>
+{% endblock %}

@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>{{ title }}</h1>
+    <p>予定情報を入力してください。</p>
+  </div>
+  <div class="actions">
+    <a class="button" href="/plans/overdue">一覧に戻る</a>
+  </div>
+</div>
+
+<form method="post" action="{{ action }}" class="form panel">
+  <label>
+    種別
+    <select name="entity_type" required>
+      <option value="ASSET" {% if plan.entity_type == 'ASSET' %}selected{% endif %}>ASSET</option>
+      <option value="REQUEST" {% if plan.entity_type == 'REQUEST' %}selected{% endif %}>REQUEST</option>
+    </select>
+  </label>
+  <label>
+    対象ID
+    <input type="number" name="entity_id" value="{{ plan.entity_id or '' }}" required />
+  </label>
+  <label>
+    タイトル
+    <input type="text" name="title" maxlength="255" required value="{{ plan.title }}" />
+  </label>
+  <label>
+    予定日
+    <input type="date" name="planned_date" value="{{ plan.planned_date or '' }}" />
+  </label>
+  <label>
+    担当予定者
+    <input type="text" name="planned_owner" maxlength="128" value="{{ plan.planned_owner or '' }}" />
+  </label>
+  <label>
+    状態
+    <select name="plan_status" required>
+      {% for status in statuses %}
+        <option value="{{ status }}" {% if plan.plan_status.value == status %}selected{% endif %}>{{ status }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>
+    実績日
+    <input type="date" name="actual_date" value="{{ plan.actual_date or '' }}" />
+  </label>
+  <label>
+    実施者
+    <input type="text" name="actual_owner" maxlength="128" value="{{ plan.actual_owner or '' }}" />
+  </label>
+  <label>
+    実績メモ
+    <textarea name="result_note" rows="4" maxlength="5000">{{ plan.result_note or '' }}</textarea>
+  </label>
+  <div class="form-actions">
+    <button type="submit" class="button">保存</button>
+  </div>
+</form>
+{% endblock %}

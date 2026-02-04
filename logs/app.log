@@ -69,3 +69,1491 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-02-04 22:53:08,985 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
 2026-02-04 22:53:08,987 INFO app request path=/logout method=POST status=303 latency_ms=0.0
 2026-02-04 22:53:08,988 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 06:41:47,671 INFO app request path=/ method=GET status=303 latency_ms=1.0
+2026-02-05 06:41:47,694 INFO app request path=/dashboard method=GET status=200 latency_ms=15.0
+2026-02-05 06:41:47,786 INFO app request path=/assets/app.css method=GET status=304 latency_ms=55.6
+2026-02-05 06:43:28,859 INFO auth login success user_id=testuser
+2026-02-05 06:43:28,861 INFO app request path=/login method=POST status=303 latency_ms=114.3
+2026-02-05 06:43:28,865 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:28,899 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 06:43:28,899 INFO app request path=/login method=POST status=303 latency_ms=3.0
+2026-02-05 06:43:28,901 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:28,905 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:43:29,088 INFO auth login success user_id=testuser
+2026-02-05 06:43:29,089 INFO app request path=/login method=POST status=303 latency_ms=76.7
+2026-02-05 06:43:29,090 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:29,097 INFO app request path=/dashboard method=GET status=200 latency_ms=5.6
+2026-02-05 06:43:29,099 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:43:29,101 INFO app request path=/logout method=POST status=303 latency_ms=1.2
+2026-02-05 06:43:29,101 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 06:43:29,189 INFO auth login success user_id=testuser
+2026-02-05 06:43:29,190 INFO app request path=/login method=POST status=303 latency_ms=81.7
+2026-02-05 06:43:29,192 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:29,196 INFO app request path=/dashboard method=GET status=200 latency_ms=1.0
+2026-02-05 06:43:29,196 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:43:29,303 INFO auth login success user_id=testuser
+2026-02-05 06:43:29,304 INFO app request path=/login method=POST status=303 latency_ms=84.0
+2026-02-05 06:43:29,305 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:29,307 INFO app request path=/assets method=GET status=307 latency_ms=1.3
+2026-02-05 06:43:29,307 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 307 Temporary Redirect"
+2026-02-05 06:43:29,309 INFO app request path=/assets/ method=GET status=404 latency_ms=1.0
+2026-02-05 06:43:29,309 INFO httpx HTTP Request: GET http://testserver/assets/ "HTTP/1.1 404 Not Found"
+2026-02-05 06:43:29,505 INFO auth login success user_id=testuser
+2026-02-05 06:43:29,507 INFO app request path=/login method=POST status=303 latency_ms=76.7
+2026-02-05 06:43:29,508 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:29,511 INFO app request path=/requests method=GET status=404 latency_ms=0.0
+2026-02-05 06:43:29,512 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 404 Not Found"
+2026-02-05 06:43:29,630 INFO auth login success user_id=testuser
+2026-02-05 06:43:29,631 INFO app request path=/login method=POST status=303 latency_ms=110.0
+2026-02-05 06:43:29,632 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:29,635 INFO app request path=/plans/overdue method=GET status=404 latency_ms=0.0
+2026-02-05 06:43:29,636 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 404 Not Found"
+2026-02-05 06:43:29,647 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:43:29,648 INFO app request path=/assets method=GET status=307 latency_ms=0.0
+2026-02-05 06:43:29,649 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 307 Temporary Redirect"
+2026-02-05 06:43:53,887 INFO auth login success user_id=testuser
+2026-02-05 06:43:53,888 INFO app request path=/login method=POST status=303 latency_ms=89.2
+2026-02-05 06:43:53,892 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:53,899 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 06:43:53,900 INFO app request path=/login method=POST status=303 latency_ms=3.0
+2026-02-05 06:43:53,901 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:53,905 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:43:54,075 INFO auth login success user_id=testuser
+2026-02-05 06:43:54,077 INFO app request path=/login method=POST status=303 latency_ms=79.4
+2026-02-05 06:43:54,079 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:54,100 INFO app request path=/dashboard method=GET status=200 latency_ms=19.9
+2026-02-05 06:43:54,102 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:43:54,104 INFO app request path=/logout method=POST status=303 latency_ms=1.1
+2026-02-05 06:43:54,105 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 06:43:54,194 INFO auth login success user_id=testuser
+2026-02-05 06:43:54,196 INFO app request path=/login method=POST status=303 latency_ms=83.9
+2026-02-05 06:43:54,197 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:54,199 INFO app request path=/dashboard method=GET status=200 latency_ms=1.0
+2026-02-05 06:43:54,199 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:43:54,308 INFO auth login success user_id=testuser
+2026-02-05 06:43:54,309 INFO app request path=/login method=POST status=303 latency_ms=104.6
+2026-02-05 06:43:54,311 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:54,317 INFO app request path=/assets method=GET status=200 latency_ms=3.8
+2026-02-05 06:43:54,318 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 06:43:54,460 INFO auth login success user_id=testuser
+2026-02-05 06:43:54,460 INFO app request path=/login method=POST status=303 latency_ms=134.7
+2026-02-05 06:43:54,462 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:54,469 INFO app request path=/requests method=GET status=200 latency_ms=3.8
+2026-02-05 06:43:54,470 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 06:43:54,598 INFO auth login success user_id=testuser
+2026-02-05 06:43:54,599 INFO app request path=/login method=POST status=303 latency_ms=119.1
+2026-02-05 06:43:54,600 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:43:54,603 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.0
+2026-02-05 06:43:54,604 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 06:43:54,610 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:43:54,610 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 06:43:54,612 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 06:43:54,613 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 06:47:42,731 INFO auth login success user_id=testuser
+2026-02-05 06:47:42,732 INFO app request path=/login method=POST status=303 latency_ms=103.3
+2026-02-05 06:47:42,734 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:47:42,742 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 06:47:42,742 INFO app request path=/login method=POST status=303 latency_ms=3.1
+2026-02-05 06:47:42,744 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:47:42,752 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:47:42,949 INFO auth login success user_id=testuser
+2026-02-05 06:47:42,950 INFO app request path=/login method=POST status=303 latency_ms=87.5
+2026-02-05 06:47:42,952 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:47:42,961 INFO app request path=/dashboard method=GET status=200 latency_ms=5.6
+2026-02-05 06:47:42,963 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:47:42,965 INFO app request path=/logout method=POST status=303 latency_ms=1.4
+2026-02-05 06:47:42,966 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 06:47:43,073 INFO auth login success user_id=testuser
+2026-02-05 06:47:43,075 INFO app request path=/login method=POST status=303 latency_ms=101.8
+2026-02-05 06:47:43,076 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:47:43,078 INFO app request path=/dashboard method=GET status=200 latency_ms=1.5
+2026-02-05 06:47:43,078 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:47:43,188 INFO auth login success user_id=testuser
+2026-02-05 06:47:43,189 INFO app request path=/login method=POST status=303 latency_ms=102.9
+2026-02-05 06:47:43,192 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:47:43,196 INFO app request path=/assets method=GET status=200 latency_ms=2.0
+2026-02-05 06:47:43,197 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 06:47:43,299 INFO auth login success user_id=testuser
+2026-02-05 06:47:43,300 INFO app request path=/login method=POST status=303 latency_ms=96.7
+2026-02-05 06:47:43,302 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:47:43,306 INFO app request path=/requests method=GET status=200 latency_ms=1.6
+2026-02-05 06:47:43,307 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 06:47:43,412 INFO auth login success user_id=testuser
+2026-02-05 06:47:43,413 INFO app request path=/login method=POST status=303 latency_ms=98.6
+2026-02-05 06:47:43,415 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:47:43,418 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.0
+2026-02-05 06:47:43,419 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 06:47:43,426 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:47:43,427 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 06:47:43,432 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 06:47:43,434 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 06:49:38,996 INFO auth login success user_id=testuser
+2026-02-05 06:49:38,998 INFO app request path=/login method=POST status=303 latency_ms=79.7
+2026-02-05 06:49:39,000 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,007 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 06:49:39,007 INFO app request path=/login method=POST status=303 latency_ms=3.2
+2026-02-05 06:49:39,010 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,013 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,162 INFO auth login success user_id=testuser
+2026-02-05 06:49:39,164 INFO app request path=/login method=POST status=303 latency_ms=71.8
+2026-02-05 06:49:39,166 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,174 INFO app request path=/dashboard method=GET status=200 latency_ms=6.3
+2026-02-05 06:49:39,175 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:49:39,177 INFO app request path=/logout method=POST status=303 latency_ms=0.0
+2026-02-05 06:49:39,178 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,264 INFO auth login success user_id=testuser
+2026-02-05 06:49:39,265 INFO app request path=/login method=POST status=303 latency_ms=78.3
+2026-02-05 06:49:39,267 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,269 INFO app request path=/dashboard method=GET status=200 latency_ms=1.2
+2026-02-05 06:49:39,269 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:49:39,355 INFO auth login success user_id=testuser
+2026-02-05 06:49:39,356 INFO app request path=/login method=POST status=303 latency_ms=80.0
+2026-02-05 06:49:39,358 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,361 INFO app request path=/assets method=GET status=200 latency_ms=2.0
+2026-02-05 06:49:39,363 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 06:49:39,451 INFO auth login success user_id=testuser
+2026-02-05 06:49:39,452 INFO app request path=/login method=POST status=303 latency_ms=84.8
+2026-02-05 06:49:39,454 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,458 INFO app request path=/requests method=GET status=200 latency_ms=2.4
+2026-02-05 06:49:39,458 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 06:49:39,550 INFO auth login success user_id=testuser
+2026-02-05 06:49:39,551 INFO app request path=/login method=POST status=303 latency_ms=84.4
+2026-02-05 06:49:39,552 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,556 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.6
+2026-02-05 06:49:39,557 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 06:49:39,562 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,564 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,565 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 06:49:39,566 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 06:51:01,175 INFO app request path=/login method=GET status=200 latency_ms=9.4
+2026-02-05 06:51:01,288 INFO app request path=/static/app.css method=GET status=200 latency_ms=52.7
+2026-02-05 06:51:03,294 INFO auth login success user_id=shuiei
+2026-02-05 06:51:03,294 INFO app request path=/login method=POST status=303 latency_ms=98.2
+2026-02-05 06:51:03,304 INFO app request path=/dashboard method=GET status=200 latency_ms=3.2
+2026-02-05 06:54:10,540 INFO auth login success user_id=testuser
+2026-02-05 06:54:10,541 INFO app request path=/login method=POST status=303 latency_ms=84.7
+2026-02-05 06:54:10,543 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:54:10,550 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 06:54:10,550 INFO app request path=/login method=POST status=303 latency_ms=2.6
+2026-02-05 06:54:10,552 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:54:10,557 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:54:10,810 INFO auth login success user_id=testuser
+2026-02-05 06:54:10,811 INFO app request path=/login method=POST status=303 latency_ms=162.3
+2026-02-05 06:54:10,814 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:54:10,858 INFO app request path=/dashboard method=GET status=200 latency_ms=41.8
+2026-02-05 06:54:10,860 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:54:10,862 INFO app request path=/logout method=POST status=303 latency_ms=1.0
+2026-02-05 06:54:10,863 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 06:54:11,065 INFO auth login success user_id=testuser
+2026-02-05 06:54:11,067 INFO app request path=/login method=POST status=303 latency_ms=92.4
+2026-02-05 06:54:11,069 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:54:11,076 INFO app request path=/dashboard method=GET status=200 latency_ms=4.9
+2026-02-05 06:54:11,077 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:54:11,248 INFO auth login success user_id=testuser
+2026-02-05 06:54:11,249 INFO app request path=/login method=POST status=303 latency_ms=81.9
+2026-02-05 06:54:11,253 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:54:11,271 INFO app request path=/assets method=GET status=200 latency_ms=15.9
+2026-02-05 06:54:11,273 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 06:54:11,459 INFO auth login success user_id=testuser
+2026-02-05 06:54:11,460 INFO app request path=/login method=POST status=303 latency_ms=96.9
+2026-02-05 06:54:11,463 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:54:11,491 INFO app request path=/requests method=GET status=200 latency_ms=24.9
+2026-02-05 06:54:11,494 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 06:54:11,703 INFO auth login success user_id=testuser
+2026-02-05 06:54:11,705 INFO app request path=/login method=POST status=303 latency_ms=101.9
+2026-02-05 06:54:11,707 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:54:11,731 INFO app request path=/plans/overdue method=GET status=200 latency_ms=20.7
+2026-02-05 06:54:11,734 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 06:54:11,740 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:54:11,741 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 06:54:11,743 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 06:54:11,745 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 06:54:11,961 INFO auth login success user_id=testuser
+2026-02-05 06:54:11,961 INFO app request path=/login method=POST status=303 latency_ms=101.1
+2026-02-05 06:54:11,964 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:54:11,971 INFO app request path=/assets method=GET status=200 latency_ms=2.4
+2026-02-05 06:54:11,973 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 06:54:12,184 INFO auth login success user_id=testuser
+2026-02-05 06:54:12,185 INFO app request path=/login method=POST status=303 latency_ms=100.3
+2026-02-05 06:54:12,187 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:54:12,195 INFO app request path=/plans/overdue method=GET status=200 latency_ms=3.7
+2026-02-05 06:54:12,196 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 06:57:36,173 INFO auth login success user_id=testuser
+2026-02-05 06:57:36,175 INFO app request path=/login method=POST status=303 latency_ms=86.3
+2026-02-05 06:57:36,181 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:57:36,189 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 06:57:36,190 INFO app request path=/login method=POST status=303 latency_ms=3.1
+2026-02-05 06:57:36,192 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:57:36,195 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:57:36,364 INFO auth login success user_id=testuser
+2026-02-05 06:57:36,365 INFO app request path=/login method=POST status=303 latency_ms=81.1
+2026-02-05 06:57:36,366 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:57:36,382 INFO app request path=/dashboard method=GET status=200 latency_ms=14.0
+2026-02-05 06:57:36,385 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:57:36,387 INFO app request path=/logout method=POST status=303 latency_ms=1.0
+2026-02-05 06:57:36,388 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 06:57:36,556 INFO auth login success user_id=testuser
+2026-02-05 06:57:36,557 INFO app request path=/login method=POST status=303 latency_ms=76.0
+2026-02-05 06:57:36,560 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:57:36,566 INFO app request path=/dashboard method=GET status=200 latency_ms=4.0
+2026-02-05 06:57:36,568 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 06:57:36,716 INFO auth login success user_id=testuser
+2026-02-05 06:57:36,718 INFO app request path=/login method=POST status=303 latency_ms=73.8
+2026-02-05 06:57:36,720 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:57:36,729 INFO app request path=/assets method=GET status=200 latency_ms=6.3
+2026-02-05 06:57:36,730 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 06:57:36,897 INFO auth login success user_id=testuser
+2026-02-05 06:57:36,897 INFO app request path=/login method=POST status=303 latency_ms=73.1
+2026-02-05 06:57:36,900 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:57:36,908 INFO app request path=/requests method=GET status=200 latency_ms=6.0
+2026-02-05 06:57:36,910 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 06:57:37,064 INFO auth login success user_id=testuser
+2026-02-05 06:57:37,065 INFO app request path=/login method=POST status=303 latency_ms=73.9
+2026-02-05 06:57:37,067 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:57:37,076 INFO app request path=/plans/overdue method=GET status=200 latency_ms=6.7
+2026-02-05 06:57:37,077 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 06:57:37,082 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 06:57:37,083 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 06:57:37,086 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 06:57:37,087 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 06:57:37,239 INFO auth login success user_id=testuser
+2026-02-05 06:57:37,241 INFO app request path=/login method=POST status=303 latency_ms=70.6
+2026-02-05 06:57:37,242 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:57:37,246 INFO app request path=/assets method=GET status=200 latency_ms=2.5
+2026-02-05 06:57:37,247 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 06:57:37,408 INFO auth login success user_id=testuser
+2026-02-05 06:57:37,410 INFO app request path=/login method=POST status=303 latency_ms=86.3
+2026-02-05 06:57:37,411 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 06:57:37,416 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.1
+2026-02-05 06:57:37,417 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:00:13,017 INFO auth login success user_id=testuser
+2026-02-05 07:00:13,019 INFO app request path=/login method=POST status=303 latency_ms=78.5
+2026-02-05 07:00:13,021 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,027 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 07:00:13,027 INFO app request path=/login method=POST status=303 latency_ms=1.5
+2026-02-05 07:00:13,029 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,033 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,180 INFO auth login success user_id=testuser
+2026-02-05 07:00:13,181 INFO app request path=/login method=POST status=303 latency_ms=71.5
+2026-02-05 07:00:13,183 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,200 INFO app request path=/dashboard method=GET status=200 latency_ms=14.7
+2026-02-05 07:00:13,202 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:00:13,205 INFO app request path=/logout method=POST status=303 latency_ms=1.0
+2026-02-05 07:00:13,206 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,368 INFO auth login success user_id=testuser
+2026-02-05 07:00:13,369 INFO app request path=/login method=POST status=303 latency_ms=73.2
+2026-02-05 07:00:13,371 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,378 INFO app request path=/dashboard method=GET status=200 latency_ms=4.2
+2026-02-05 07:00:13,379 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:00:13,531 INFO auth login success user_id=testuser
+2026-02-05 07:00:13,533 INFO app request path=/login method=POST status=303 latency_ms=71.5
+2026-02-05 07:00:13,535 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,543 INFO app request path=/assets method=GET status=200 latency_ms=6.4
+2026-02-05 07:00:13,544 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:00:13,727 INFO auth login success user_id=testuser
+2026-02-05 07:00:13,729 INFO app request path=/login method=POST status=303 latency_ms=92.8
+2026-02-05 07:00:13,732 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,740 INFO app request path=/requests method=GET status=200 latency_ms=6.0
+2026-02-05 07:00:13,741 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 07:00:13,893 INFO auth login success user_id=testuser
+2026-02-05 07:00:13,895 INFO app request path=/login method=POST status=303 latency_ms=72.1
+2026-02-05 07:00:13,897 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,905 INFO app request path=/plans/overdue method=GET status=200 latency_ms=6.2
+2026-02-05 07:00:13,906 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:00:13,910 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,911 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,913 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:00:13,914 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 07:00:14,066 INFO auth login success user_id=testuser
+2026-02-05 07:00:14,067 INFO app request path=/login method=POST status=303 latency_ms=69.6
+2026-02-05 07:00:14,069 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:00:14,074 INFO app request path=/assets method=GET status=200 latency_ms=2.0
+2026-02-05 07:00:14,075 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:00:14,227 INFO auth login success user_id=testuser
+2026-02-05 07:00:14,228 INFO app request path=/login method=POST status=303 latency_ms=76.4
+2026-02-05 07:00:14,229 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:00:14,234 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.0
+2026-02-05 07:00:14,236 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:28:45,156 INFO auth login success user_id=testuser
+2026-02-05 07:28:45,158 INFO app request path=/login method=POST status=303 latency_ms=88.8
+2026-02-05 07:28:45,160 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:28:45,168 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 07:28:45,168 INFO app request path=/login method=POST status=303 latency_ms=2.4
+2026-02-05 07:28:45,170 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:28:45,175 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:28:45,337 INFO auth login success user_id=testuser
+2026-02-05 07:28:45,338 INFO app request path=/login method=POST status=303 latency_ms=78.3
+2026-02-05 07:28:45,340 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:28:45,356 INFO app request path=/dashboard method=GET status=200 latency_ms=14.5
+2026-02-05 07:28:45,358 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:28:45,360 INFO app request path=/logout method=POST status=303 latency_ms=0.0
+2026-02-05 07:28:45,361 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 07:28:45,533 INFO auth login success user_id=testuser
+2026-02-05 07:28:45,534 INFO app request path=/login method=POST status=303 latency_ms=77.8
+2026-02-05 07:28:45,536 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:28:45,542 INFO app request path=/dashboard method=GET status=200 latency_ms=4.0
+2026-02-05 07:28:45,545 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:28:45,689 INFO auth login success user_id=testuser
+2026-02-05 07:28:45,690 INFO app request path=/login method=POST status=303 latency_ms=70.1
+2026-02-05 07:28:45,693 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:28:45,701 INFO app request path=/assets method=GET status=200 latency_ms=6.4
+2026-02-05 07:28:45,703 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:28:45,851 INFO auth login success user_id=testuser
+2026-02-05 07:28:45,852 INFO app request path=/login method=POST status=303 latency_ms=70.9
+2026-02-05 07:28:45,853 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:28:45,862 INFO app request path=/requests method=GET status=200 latency_ms=6.3
+2026-02-05 07:28:45,864 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 07:28:46,025 INFO auth login success user_id=testuser
+2026-02-05 07:28:46,026 INFO app request path=/login method=POST status=303 latency_ms=74.3
+2026-02-05 07:28:46,028 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:28:46,037 INFO app request path=/plans/overdue method=GET status=200 latency_ms=7.1
+2026-02-05 07:28:46,039 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:28:46,043 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:28:46,045 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:28:46,046 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:28:46,047 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 07:28:46,207 INFO auth login success user_id=testuser
+2026-02-05 07:28:46,209 INFO app request path=/login method=POST status=303 latency_ms=78.3
+2026-02-05 07:28:46,210 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:28:46,214 INFO app request path=/assets method=GET status=200 latency_ms=1.5
+2026-02-05 07:28:46,215 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:28:46,361 INFO auth login success user_id=testuser
+2026-02-05 07:28:46,362 INFO app request path=/login method=POST status=303 latency_ms=70.9
+2026-02-05 07:28:46,365 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:28:46,369 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.1
+2026-02-05 07:28:46,371 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:33:07,073 INFO auth login success user_id=testuser
+2026-02-05 07:33:07,074 INFO app request path=/login method=POST status=303 latency_ms=78.1
+2026-02-05 07:33:07,076 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,084 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 07:33:07,084 INFO app request path=/login method=POST status=303 latency_ms=2.0
+2026-02-05 07:33:07,086 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,090 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,242 INFO auth login success user_id=testuser
+2026-02-05 07:33:07,243 INFO app request path=/login method=POST status=303 latency_ms=70.5
+2026-02-05 07:33:07,245 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,260 INFO app request path=/dashboard method=GET status=200 latency_ms=13.7
+2026-02-05 07:33:07,263 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:33:07,265 INFO app request path=/logout method=POST status=303 latency_ms=0.0
+2026-02-05 07:33:07,266 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,430 INFO auth login success user_id=testuser
+2026-02-05 07:33:07,431 INFO app request path=/login method=POST status=303 latency_ms=73.9
+2026-02-05 07:33:07,434 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,440 INFO app request path=/dashboard method=GET status=200 latency_ms=4.2
+2026-02-05 07:33:07,441 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:33:07,587 INFO auth login success user_id=testuser
+2026-02-05 07:33:07,588 INFO app request path=/login method=POST status=303 latency_ms=70.0
+2026-02-05 07:33:07,590 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,598 INFO app request path=/assets method=GET status=200 latency_ms=6.3
+2026-02-05 07:33:07,600 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:33:07,744 INFO auth login success user_id=testuser
+2026-02-05 07:33:07,745 INFO app request path=/login method=POST status=303 latency_ms=68.7
+2026-02-05 07:33:07,748 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,756 INFO app request path=/requests method=GET status=200 latency_ms=6.4
+2026-02-05 07:33:07,757 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 07:33:07,909 INFO auth login success user_id=testuser
+2026-02-05 07:33:07,910 INFO app request path=/login method=POST status=303 latency_ms=73.5
+2026-02-05 07:33:07,912 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,921 INFO app request path=/plans/overdue method=GET status=200 latency_ms=6.5
+2026-02-05 07:33:07,922 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:33:07,927 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,929 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,930 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:33:07,931 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 07:33:08,088 INFO auth login success user_id=testuser
+2026-02-05 07:33:08,089 INFO app request path=/login method=POST status=303 latency_ms=73.5
+2026-02-05 07:33:08,090 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:33:08,094 INFO app request path=/assets method=GET status=200 latency_ms=1.0
+2026-02-05 07:33:08,097 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:33:08,243 INFO auth login success user_id=testuser
+2026-02-05 07:33:08,244 INFO app request path=/login method=POST status=303 latency_ms=68.0
+2026-02-05 07:33:08,246 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:33:08,250 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.1
+2026-02-05 07:33:08,253 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:33:08,255 WARNING plan plan validation failed status=DONE reason=actual_date_required
+2026-02-05 07:33:08,256 INFO plan plan validation ok status=DONE
+2026-02-05 07:33:08,258 WARNING plan plan validation failed status=PLANNED reason=actuals_not_allowed
+2026-02-05 07:33:08,259 WARNING plan plan validation failed status=CANCELLED reason=actuals_not_allowed
+2026-02-05 07:33:08,261 WARNING plan plan validation failed reason=title_required
+2026-02-05 07:33:08,419 INFO transition request transition from=None to=RQ actor=tester result=allowed
+2026-02-05 07:33:08,421 WARNING transition request transition from=RQ to=RP actor=tester result=denied
+2026-02-05 07:33:08,422 INFO transition asset transition from=INV to=READY actor=tester result=allowed
+2026-02-05 07:33:08,423 WARNING transition asset transition from=INV to=USE actor=tester result=denied
+2026-02-05 07:35:28,640 INFO auth login success user_id=testuser
+2026-02-05 07:35:28,642 INFO app request path=/login method=POST status=303 latency_ms=83.7
+2026-02-05 07:35:28,644 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:35:28,651 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 07:35:28,651 INFO app request path=/login method=POST status=303 latency_ms=2.1
+2026-02-05 07:35:28,652 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:35:28,656 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:35:28,802 INFO auth login success user_id=testuser
+2026-02-05 07:35:28,803 INFO app request path=/login method=POST status=303 latency_ms=70.3
+2026-02-05 07:35:28,805 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:35:28,821 INFO app request path=/dashboard method=GET status=200 latency_ms=14.1
+2026-02-05 07:35:28,823 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:35:28,825 INFO app request path=/logout method=POST status=303 latency_ms=0.0
+2026-02-05 07:35:28,826 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 07:35:28,985 INFO auth login success user_id=testuser
+2026-02-05 07:35:28,987 INFO app request path=/login method=POST status=303 latency_ms=69.9
+2026-02-05 07:35:28,988 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:35:28,996 INFO app request path=/dashboard method=GET status=200 latency_ms=3.1
+2026-02-05 07:35:28,997 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:35:29,141 INFO auth login success user_id=testuser
+2026-02-05 07:35:29,141 INFO app request path=/login method=POST status=303 latency_ms=68.4
+2026-02-05 07:35:29,143 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:35:29,180 INFO app request path=/assets method=GET status=200 latency_ms=34.5
+2026-02-05 07:35:29,184 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:35:29,351 INFO auth login success user_id=testuser
+2026-02-05 07:35:29,352 INFO app request path=/login method=POST status=303 latency_ms=70.5
+2026-02-05 07:35:29,354 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:35:29,375 INFO app request path=/requests method=GET status=200 latency_ms=18.9
+2026-02-05 07:35:29,377 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 07:35:29,539 INFO auth login success user_id=testuser
+2026-02-05 07:35:29,540 INFO app request path=/login method=POST status=303 latency_ms=73.2
+2026-02-05 07:35:29,542 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:35:29,565 INFO app request path=/plans/overdue method=GET status=200 latency_ms=19.5
+2026-02-05 07:35:29,567 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:35:29,577 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:35:29,578 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:35:29,580 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:35:29,583 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 07:35:29,745 INFO auth login success user_id=testuser
+2026-02-05 07:35:29,747 INFO app request path=/login method=POST status=303 latency_ms=70.2
+2026-02-05 07:35:29,748 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:35:29,753 INFO app request path=/assets method=GET status=200 latency_ms=1.8
+2026-02-05 07:35:29,754 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:35:29,902 INFO auth login success user_id=testuser
+2026-02-05 07:35:29,903 INFO app request path=/login method=POST status=303 latency_ms=72.2
+2026-02-05 07:35:29,904 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:35:29,908 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.2
+2026-02-05 07:35:29,909 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:35:30,057 INFO auth login success user_id=testuser
+2026-02-05 07:35:30,058 INFO app request path=/login method=POST status=303 latency_ms=68.7
+2026-02-05 07:35:30,059 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:35:30,065 INFO app request path=/assets method=GET status=200 latency_ms=3.1
+2026-02-05 07:35:30,066 INFO httpx HTTP Request: GET http://testserver/assets?status=INV "HTTP/1.1 200 OK"
+2026-02-05 07:35:30,068 WARNING plan plan validation failed status=DONE reason=actual_date_required
+2026-02-05 07:35:30,070 INFO plan plan validation ok status=DONE
+2026-02-05 07:35:30,071 WARNING plan plan validation failed status=PLANNED reason=actuals_not_allowed
+2026-02-05 07:35:30,072 WARNING plan plan validation failed status=CANCELLED reason=actuals_not_allowed
+2026-02-05 07:35:30,073 WARNING plan plan validation failed reason=title_required
+2026-02-05 07:35:30,291 INFO transition request transition from=None to=RQ actor=tester result=allowed
+2026-02-05 07:35:30,292 WARNING transition request transition from=RQ to=RP actor=tester result=denied
+2026-02-05 07:35:30,293 INFO transition asset transition from=INV to=READY actor=tester result=allowed
+2026-02-05 07:35:30,295 WARNING transition asset transition from=INV to=USE actor=tester result=denied
+2026-02-05 07:40:16,419 INFO auth login success user_id=testuser
+2026-02-05 07:40:16,420 INFO app request path=/login method=POST status=303 latency_ms=88.1
+2026-02-05 07:40:16,423 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:16,430 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 07:40:16,430 INFO app request path=/login method=POST status=303 latency_ms=2.2
+2026-02-05 07:40:16,432 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:16,437 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:40:16,601 INFO auth login success user_id=testuser
+2026-02-05 07:40:16,601 INFO app request path=/login method=POST status=303 latency_ms=77.2
+2026-02-05 07:40:16,603 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:16,619 INFO app request path=/dashboard method=GET status=200 latency_ms=15.3
+2026-02-05 07:40:16,620 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:40:16,623 INFO app request path=/logout method=POST status=303 latency_ms=0.0
+2026-02-05 07:40:16,625 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 07:40:16,803 INFO auth login success user_id=testuser
+2026-02-05 07:40:16,804 INFO app request path=/login method=POST status=303 latency_ms=86.0
+2026-02-05 07:40:16,805 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:16,814 INFO transition asset transition from=AssetStatus.INV to=READY actor=testuser result=allowed
+2026-02-05 07:40:16,817 INFO app request path=/assets/1/transition method=POST status=303 latency_ms=6.8
+2026-02-05 07:40:16,818 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:40:16,979 INFO auth login success user_id=testuser
+2026-02-05 07:40:16,980 INFO app request path=/login method=POST status=303 latency_ms=75.0
+2026-02-05 07:40:16,981 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:16,987 WARNING transition asset transition from=AssetStatus.INV to=USE actor=testuser result=denied
+2026-02-05 07:40:17,026 INFO app request path=/assets/1/transition method=POST status=409 latency_ms=41.3
+2026-02-05 07:40:17,030 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 409 Conflict"
+2026-02-05 07:40:17,223 INFO auth login success user_id=testuser
+2026-02-05 07:40:17,223 INFO app request path=/login method=POST status=303 latency_ms=89.2
+2026-02-05 07:40:17,226 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:17,236 INFO transition request transition from=RequestStatus.RQ to=OP actor=testuser result=allowed
+2026-02-05 07:40:17,237 INFO app request path=/requests/1/transition method=POST status=303 latency_ms=5.6
+2026-02-05 07:40:17,239 INFO httpx HTTP Request: POST http://testserver/requests/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:40:17,417 INFO auth login success user_id=testuser
+2026-02-05 07:40:17,418 INFO app request path=/login method=POST status=303 latency_ms=93.2
+2026-02-05 07:40:17,419 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:17,427 INFO plan plan validation ok status=DONE
+2026-02-05 07:40:17,429 INFO app request path=/plans/1/done method=POST status=303 latency_ms=6.1
+2026-02-05 07:40:17,430 INFO httpx HTTP Request: POST http://testserver/plans/1/done "HTTP/1.1 303 See Other"
+2026-02-05 07:40:17,638 INFO auth login success user_id=testuser
+2026-02-05 07:40:17,639 INFO app request path=/login method=POST status=303 latency_ms=91.7
+2026-02-05 07:40:17,641 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:17,691 INFO app request path=/dashboard method=GET status=200 latency_ms=46.8
+2026-02-05 07:40:17,694 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:40:17,860 INFO auth login success user_id=testuser
+2026-02-05 07:40:17,861 INFO app request path=/login method=POST status=303 latency_ms=77.2
+2026-02-05 07:40:17,863 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:17,869 INFO app request path=/assets method=GET status=200 latency_ms=4.2
+2026-02-05 07:40:17,870 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:40:18,034 INFO auth login success user_id=testuser
+2026-02-05 07:40:18,034 INFO app request path=/login method=POST status=303 latency_ms=81.5
+2026-02-05 07:40:18,036 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:18,059 INFO app request path=/requests method=GET status=200 latency_ms=21.1
+2026-02-05 07:40:18,062 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 07:40:18,222 INFO auth login success user_id=testuser
+2026-02-05 07:40:18,222 INFO app request path=/login method=POST status=303 latency_ms=77.6
+2026-02-05 07:40:18,225 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:18,255 INFO app request path=/plans/overdue method=GET status=200 latency_ms=28.4
+2026-02-05 07:40:18,261 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:40:18,275 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:40:18,280 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:40:18,286 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:40:18,291 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 07:40:18,473 INFO auth login success user_id=testuser
+2026-02-05 07:40:18,475 INFO app request path=/login method=POST status=303 latency_ms=75.2
+2026-02-05 07:40:18,476 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:18,481 INFO app request path=/assets method=GET status=200 latency_ms=2.4
+2026-02-05 07:40:18,482 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:40:18,643 INFO auth login success user_id=testuser
+2026-02-05 07:40:18,643 INFO app request path=/login method=POST status=303 latency_ms=78.8
+2026-02-05 07:40:18,645 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:18,650 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.7
+2026-02-05 07:40:18,652 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:40:18,805 INFO auth login success user_id=testuser
+2026-02-05 07:40:18,807 INFO app request path=/login method=POST status=303 latency_ms=74.4
+2026-02-05 07:40:18,809 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:40:18,814 INFO app request path=/assets method=GET status=200 latency_ms=3.1
+2026-02-05 07:40:18,816 INFO httpx HTTP Request: GET http://testserver/assets?status=INV "HTTP/1.1 200 OK"
+2026-02-05 07:40:18,818 WARNING plan plan validation failed status=DONE reason=actual_date_required
+2026-02-05 07:40:18,819 INFO plan plan validation ok status=DONE
+2026-02-05 07:40:18,822 WARNING plan plan validation failed status=PLANNED reason=actuals_not_allowed
+2026-02-05 07:40:18,822 WARNING plan plan validation failed status=CANCELLED reason=actuals_not_allowed
+2026-02-05 07:40:18,824 WARNING plan plan validation failed reason=title_required
+2026-02-05 07:40:18,982 INFO transition request transition from=None to=RQ actor=tester result=allowed
+2026-02-05 07:40:18,983 WARNING transition request transition from=RQ to=RP actor=tester result=denied
+2026-02-05 07:40:18,985 INFO transition asset transition from=INV to=READY actor=tester result=allowed
+2026-02-05 07:40:18,986 WARNING transition asset transition from=INV to=USE actor=tester result=denied
+2026-02-05 07:44:36,322 INFO auth login success user_id=testuser
+2026-02-05 07:44:36,324 INFO app request path=/login method=POST status=303 latency_ms=81.6
+2026-02-05 07:44:36,326 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:36,332 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 07:44:36,332 INFO app request path=/login method=POST status=303 latency_ms=2.2
+2026-02-05 07:44:36,334 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:36,337 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:44:36,486 INFO auth login success user_id=testuser
+2026-02-05 07:44:36,487 INFO app request path=/login method=POST status=303 latency_ms=73.3
+2026-02-05 07:44:36,489 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:36,509 INFO app request path=/dashboard method=GET status=200 latency_ms=17.5
+2026-02-05 07:44:36,511 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:44:36,514 INFO app request path=/logout method=POST status=303 latency_ms=1.0
+2026-02-05 07:44:36,515 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 07:44:36,684 INFO auth login success user_id=testuser
+2026-02-05 07:44:36,685 INFO app request path=/login method=POST status=303 latency_ms=79.8
+2026-02-05 07:44:36,687 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:36,695 INFO transition asset transition from=AssetStatus.INV to=READY actor=testuser result=allowed
+2026-02-05 07:44:36,699 INFO app request path=/assets/1/transition method=POST status=303 latency_ms=7.3
+2026-02-05 07:44:36,700 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:44:36,843 INFO auth login success user_id=testuser
+2026-02-05 07:44:36,844 INFO app request path=/login method=POST status=303 latency_ms=67.4
+2026-02-05 07:44:36,846 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:36,851 WARNING transition asset transition from=AssetStatus.INV to=USE actor=testuser result=denied
+2026-02-05 07:44:36,872 INFO app request path=/assets/1/transition method=POST status=409 latency_ms=23.7
+2026-02-05 07:44:36,875 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 409 Conflict"
+2026-02-05 07:44:37,022 INFO auth login success user_id=testuser
+2026-02-05 07:44:37,023 INFO app request path=/login method=POST status=303 latency_ms=67.1
+2026-02-05 07:44:37,026 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:37,033 INFO transition request transition from=RequestStatus.RQ to=OP actor=testuser result=allowed
+2026-02-05 07:44:37,034 INFO app request path=/requests/1/transition method=POST status=303 latency_ms=5.0
+2026-02-05 07:44:37,035 INFO httpx HTTP Request: POST http://testserver/requests/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:44:37,182 INFO auth login success user_id=testuser
+2026-02-05 07:44:37,183 INFO app request path=/login method=POST status=303 latency_ms=71.4
+2026-02-05 07:44:37,185 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:37,194 INFO plan plan validation ok status=DONE
+2026-02-05 07:44:37,196 INFO app request path=/plans/1/done method=POST status=303 latency_ms=5.2
+2026-02-05 07:44:37,197 INFO httpx HTTP Request: POST http://testserver/plans/1/done "HTTP/1.1 303 See Other"
+2026-02-05 07:44:37,342 INFO auth login success user_id=testuser
+2026-02-05 07:44:37,344 INFO app request path=/login method=POST status=303 latency_ms=70.5
+2026-02-05 07:44:37,347 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:37,350 INFO app request path=/assets/import method=POST status=303 latency_ms=1.0
+2026-02-05 07:44:37,351 INFO httpx HTTP Request: POST http://testserver/assets/import "HTTP/1.1 303 See Other"
+2026-02-05 07:44:37,392 INFO app request path=/assets method=GET status=200 latency_ms=39.2
+2026-02-05 07:44:37,394 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:44:37,569 INFO auth login success user_id=testuser
+2026-02-05 07:44:37,570 INFO app request path=/login method=POST status=303 latency_ms=77.2
+2026-02-05 07:44:37,572 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:37,579 INFO app request path=/dashboard method=GET status=200 latency_ms=4.7
+2026-02-05 07:44:37,581 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:44:37,725 INFO auth login success user_id=testuser
+2026-02-05 07:44:37,726 INFO app request path=/login method=POST status=303 latency_ms=69.3
+2026-02-05 07:44:37,728 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:37,732 INFO app request path=/assets method=GET status=200 latency_ms=2.1
+2026-02-05 07:44:37,734 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:44:37,885 INFO auth login success user_id=testuser
+2026-02-05 07:44:37,887 INFO app request path=/login method=POST status=303 latency_ms=74.9
+2026-02-05 07:44:37,888 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:37,897 INFO app request path=/requests method=GET status=200 latency_ms=6.7
+2026-02-05 07:44:37,899 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 07:44:38,060 INFO auth login success user_id=testuser
+2026-02-05 07:44:38,061 INFO app request path=/login method=POST status=303 latency_ms=79.3
+2026-02-05 07:44:38,064 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:38,072 INFO app request path=/plans/overdue method=GET status=200 latency_ms=6.2
+2026-02-05 07:44:38,074 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:44:38,079 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:44:38,081 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:44:38,082 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:44:38,083 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 07:44:38,239 INFO auth login success user_id=testuser
+2026-02-05 07:44:38,240 INFO app request path=/login method=POST status=303 latency_ms=73.8
+2026-02-05 07:44:38,242 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:38,245 INFO app request path=/assets method=GET status=200 latency_ms=1.3
+2026-02-05 07:44:38,248 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:44:38,398 INFO auth login success user_id=testuser
+2026-02-05 07:44:38,399 INFO app request path=/login method=POST status=303 latency_ms=72.1
+2026-02-05 07:44:38,401 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:38,406 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.3
+2026-02-05 07:44:38,407 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:44:38,566 INFO auth login success user_id=testuser
+2026-02-05 07:44:38,567 INFO app request path=/login method=POST status=303 latency_ms=76.3
+2026-02-05 07:44:38,569 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:44:38,574 INFO app request path=/assets method=GET status=200 latency_ms=2.7
+2026-02-05 07:44:38,575 INFO httpx HTTP Request: GET http://testserver/assets?status=INV "HTTP/1.1 200 OK"
+2026-02-05 07:44:38,578 WARNING plan plan validation failed status=DONE reason=actual_date_required
+2026-02-05 07:44:38,580 INFO plan plan validation ok status=DONE
+2026-02-05 07:44:38,580 WARNING plan plan validation failed status=PLANNED reason=actuals_not_allowed
+2026-02-05 07:44:38,582 WARNING plan plan validation failed status=CANCELLED reason=actuals_not_allowed
+2026-02-05 07:44:38,583 WARNING plan plan validation failed reason=title_required
+2026-02-05 07:44:38,752 INFO transition request transition from=None to=RQ actor=tester result=allowed
+2026-02-05 07:44:38,753 WARNING transition request transition from=RQ to=RP actor=tester result=denied
+2026-02-05 07:44:38,754 INFO transition asset transition from=INV to=READY actor=tester result=allowed
+2026-02-05 07:44:38,756 WARNING transition asset transition from=INV to=USE actor=tester result=denied
+2026-02-05 07:48:27,891 INFO auth login success user_id=testuser
+2026-02-05 07:48:27,892 INFO app request path=/login method=POST status=303 latency_ms=78.2
+2026-02-05 07:48:27,895 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:27,900 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 07:48:27,901 INFO app request path=/login method=POST status=303 latency_ms=2.3
+2026-02-05 07:48:27,902 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:27,908 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:48:28,068 INFO auth login success user_id=testuser
+2026-02-05 07:48:28,069 INFO app request path=/login method=POST status=303 latency_ms=74.8
+2026-02-05 07:48:28,070 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:28,089 INFO app request path=/dashboard method=GET status=200 latency_ms=16.2
+2026-02-05 07:48:28,090 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:48:28,092 INFO app request path=/logout method=POST status=303 latency_ms=0.0
+2026-02-05 07:48:28,094 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 07:48:28,100 ERROR app db error path=/_test/db_error
+Traceback (most recent call last):
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\tests\test_error_handling.py", line 15, in _db_error
+    raise SQLAlchemyError("db boom")
+sqlalchemy.exc.SQLAlchemyError: db boom
+2026-02-05 07:48:28,102 INFO httpx HTTP Request: GET http://testserver/_test/db_error "HTTP/1.1 500 Internal Server Error"
+2026-02-05 07:48:28,107 ERROR app unexpected error path=/_test/unexpected_error
+Traceback (most recent call last):
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\tests\test_error_handling.py", line 30, in _unexpected_error
+    raise RuntimeError("boom")
+RuntimeError: boom
+2026-02-05 07:48:28,688 INFO auth login success user_id=testuser
+2026-02-05 07:48:28,690 INFO app request path=/login method=POST status=303 latency_ms=73.4
+2026-02-05 07:48:28,692 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:28,740 INFO transition asset transition from=AssetStatus.INV to=READY actor=testuser result=allowed
+2026-02-05 07:48:28,744 INFO app request path=/assets/1/transition method=POST status=303 latency_ms=10.9
+2026-02-05 07:48:28,746 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:48:28,900 INFO auth login success user_id=testuser
+2026-02-05 07:48:28,901 INFO app request path=/login method=POST status=303 latency_ms=71.0
+2026-02-05 07:48:28,903 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:28,908 WARNING transition asset transition from=AssetStatus.INV to=USE actor=testuser result=denied
+2026-02-05 07:48:28,914 INFO app request path=/assets/1/transition method=POST status=409 latency_ms=7.8
+2026-02-05 07:48:28,917 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 409 Conflict"
+2026-02-05 07:48:29,063 INFO auth login success user_id=testuser
+2026-02-05 07:48:29,064 INFO app request path=/login method=POST status=303 latency_ms=70.2
+2026-02-05 07:48:29,066 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:29,075 INFO transition request transition from=RequestStatus.RQ to=OP actor=testuser result=allowed
+2026-02-05 07:48:29,076 INFO app request path=/requests/1/transition method=POST status=303 latency_ms=5.6
+2026-02-05 07:48:29,078 INFO httpx HTTP Request: POST http://testserver/requests/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:48:29,237 INFO auth login success user_id=testuser
+2026-02-05 07:48:29,238 INFO app request path=/login method=POST status=303 latency_ms=71.6
+2026-02-05 07:48:29,240 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:29,248 INFO plan plan validation ok status=DONE
+2026-02-05 07:48:29,249 INFO app request path=/plans/1/done method=POST status=303 latency_ms=4.5
+2026-02-05 07:48:29,251 INFO httpx HTTP Request: POST http://testserver/plans/1/done "HTTP/1.1 303 See Other"
+2026-02-05 07:48:29,415 INFO auth login success user_id=testuser
+2026-02-05 07:48:29,417 INFO app request path=/login method=POST status=303 latency_ms=89.8
+2026-02-05 07:48:29,421 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:29,427 INFO app request path=/assets/import method=POST status=303 latency_ms=2.2
+2026-02-05 07:48:29,428 INFO httpx HTTP Request: POST http://testserver/assets/import "HTTP/1.1 303 See Other"
+2026-02-05 07:48:29,431 INFO app request path=/assets method=GET status=200 latency_ms=2.4
+2026-02-05 07:48:29,433 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:48:29,630 INFO auth login success user_id=testuser
+2026-02-05 07:48:29,632 INFO app request path=/login method=POST status=303 latency_ms=99.5
+2026-02-05 07:48:29,633 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:29,643 INFO app request path=/dashboard method=GET status=200 latency_ms=6.4
+2026-02-05 07:48:29,644 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:48:29,795 INFO auth login success user_id=testuser
+2026-02-05 07:48:29,795 INFO app request path=/login method=POST status=303 latency_ms=69.4
+2026-02-05 07:48:29,798 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:29,802 INFO app request path=/assets method=GET status=200 latency_ms=2.0
+2026-02-05 07:48:29,804 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:48:29,949 INFO auth login success user_id=testuser
+2026-02-05 07:48:29,950 INFO app request path=/login method=POST status=303 latency_ms=70.6
+2026-02-05 07:48:29,951 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:29,961 INFO app request path=/requests method=GET status=200 latency_ms=6.7
+2026-02-05 07:48:29,962 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 07:48:30,118 INFO auth login success user_id=testuser
+2026-02-05 07:48:30,119 INFO app request path=/login method=POST status=303 latency_ms=72.1
+2026-02-05 07:48:30,120 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:30,130 INFO app request path=/plans/overdue method=GET status=200 latency_ms=6.6
+2026-02-05 07:48:30,132 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:48:30,137 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:48:30,139 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:48:30,141 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:48:30,142 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 07:48:30,300 INFO auth login success user_id=testuser
+2026-02-05 07:48:30,301 INFO app request path=/login method=POST status=303 latency_ms=70.1
+2026-02-05 07:48:30,302 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:30,306 INFO app request path=/assets method=GET status=200 latency_ms=1.3
+2026-02-05 07:48:30,308 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:48:30,460 INFO auth login success user_id=testuser
+2026-02-05 07:48:30,461 INFO app request path=/login method=POST status=303 latency_ms=70.4
+2026-02-05 07:48:30,463 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:30,466 INFO app request path=/plans/overdue method=GET status=200 latency_ms=1.5
+2026-02-05 07:48:30,467 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:48:30,622 INFO auth login success user_id=testuser
+2026-02-05 07:48:30,623 INFO app request path=/login method=POST status=303 latency_ms=78.5
+2026-02-05 07:48:30,626 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:30,633 INFO app request path=/assets method=GET status=200 latency_ms=3.1
+2026-02-05 07:48:30,635 INFO httpx HTTP Request: GET http://testserver/assets?status=INV "HTTP/1.1 200 OK"
+2026-02-05 07:48:30,639 WARNING plan plan validation failed status=DONE reason=actual_date_required
+2026-02-05 07:48:30,640 INFO plan plan validation ok status=DONE
+2026-02-05 07:48:30,642 WARNING plan plan validation failed status=PLANNED reason=actuals_not_allowed
+2026-02-05 07:48:30,644 WARNING plan plan validation failed status=CANCELLED reason=actuals_not_allowed
+2026-02-05 07:48:30,646 WARNING plan plan validation failed reason=title_required
+2026-02-05 07:48:30,843 INFO transition request transition from=None to=RQ actor=tester result=allowed
+2026-02-05 07:48:30,844 WARNING transition request transition from=RQ to=RP actor=tester result=denied
+2026-02-05 07:48:30,845 INFO transition asset transition from=INV to=READY actor=tester result=allowed
+2026-02-05 07:48:30,846 WARNING transition asset transition from=INV to=USE actor=tester result=denied
+2026-02-05 07:48:52,410 INFO auth login success user_id=testuser
+2026-02-05 07:48:52,411 INFO app request path=/login method=POST status=303 latency_ms=79.4
+2026-02-05 07:48:52,413 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:52,420 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 07:48:52,421 INFO app request path=/login method=POST status=303 latency_ms=3.4
+2026-02-05 07:48:52,422 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:52,427 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:48:52,577 INFO auth login success user_id=testuser
+2026-02-05 07:48:52,578 INFO app request path=/login method=POST status=303 latency_ms=74.3
+2026-02-05 07:48:52,580 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:52,597 INFO app request path=/dashboard method=GET status=200 latency_ms=14.0
+2026-02-05 07:48:52,598 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:48:52,600 INFO app request path=/logout method=POST status=303 latency_ms=0.0
+2026-02-05 07:48:52,602 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 07:48:52,610 ERROR app db error path=/_test/db_error
+Traceback (most recent call last):
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\tests\test_error_handling.py", line 15, in _db_error
+    raise SQLAlchemyError("db boom")
+sqlalchemy.exc.SQLAlchemyError: db boom
+2026-02-05 07:48:52,612 INFO httpx HTTP Request: GET http://testserver/_test/db_error "HTTP/1.1 500 Internal Server Error"
+2026-02-05 07:48:52,617 ERROR app unexpected error path=/_test/unexpected_error
+Traceback (most recent call last):
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\tests\test_error_handling.py", line 30, in _unexpected_error
+    raise RuntimeError("boom")
+RuntimeError: boom
+2026-02-05 07:48:52,620 INFO httpx HTTP Request: GET http://testserver/_test/unexpected_error "HTTP/1.1 500 Internal Server Error"
+2026-02-05 07:48:52,779 INFO auth login success user_id=testuser
+2026-02-05 07:48:52,781 INFO app request path=/login method=POST status=303 latency_ms=71.1
+2026-02-05 07:48:52,782 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:52,791 INFO transition asset transition from=AssetStatus.INV to=READY actor=testuser result=allowed
+2026-02-05 07:48:52,794 INFO app request path=/assets/1/transition method=POST status=303 latency_ms=7.8
+2026-02-05 07:48:52,795 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:48:52,942 INFO auth login success user_id=testuser
+2026-02-05 07:48:52,943 INFO app request path=/login method=POST status=303 latency_ms=69.0
+2026-02-05 07:48:52,946 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:52,950 WARNING transition asset transition from=AssetStatus.INV to=USE actor=testuser result=denied
+2026-02-05 07:48:52,957 INFO app request path=/assets/1/transition method=POST status=409 latency_ms=8.1
+2026-02-05 07:48:52,960 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 409 Conflict"
+2026-02-05 07:48:53,108 INFO auth login success user_id=testuser
+2026-02-05 07:48:53,109 INFO app request path=/login method=POST status=303 latency_ms=69.8
+2026-02-05 07:48:53,110 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:53,118 INFO transition request transition from=RequestStatus.RQ to=OP actor=testuser result=allowed
+2026-02-05 07:48:53,119 INFO app request path=/requests/1/transition method=POST status=303 latency_ms=5.5
+2026-02-05 07:48:53,122 INFO httpx HTTP Request: POST http://testserver/requests/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:48:53,276 INFO auth login success user_id=testuser
+2026-02-05 07:48:53,277 INFO app request path=/login method=POST status=303 latency_ms=75.7
+2026-02-05 07:48:53,279 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:53,287 INFO plan plan validation ok status=DONE
+2026-02-05 07:48:53,288 INFO app request path=/plans/1/done method=POST status=303 latency_ms=4.5
+2026-02-05 07:48:53,290 INFO httpx HTTP Request: POST http://testserver/plans/1/done "HTTP/1.1 303 See Other"
+2026-02-05 07:48:53,473 INFO auth login success user_id=testuser
+2026-02-05 07:48:53,474 INFO app request path=/login method=POST status=303 latency_ms=85.6
+2026-02-05 07:48:53,477 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:53,482 INFO app request path=/assets/import method=POST status=303 latency_ms=2.0
+2026-02-05 07:48:53,485 INFO httpx HTTP Request: POST http://testserver/assets/import "HTTP/1.1 303 See Other"
+2026-02-05 07:48:53,490 INFO app request path=/assets method=GET status=200 latency_ms=3.0
+2026-02-05 07:48:53,492 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:48:53,720 INFO auth login success user_id=testuser
+2026-02-05 07:48:53,721 INFO app request path=/login method=POST status=303 latency_ms=82.3
+2026-02-05 07:48:53,723 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:53,730 INFO app request path=/dashboard method=GET status=200 latency_ms=5.1
+2026-02-05 07:48:53,731 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:48:53,877 INFO auth login success user_id=testuser
+2026-02-05 07:48:53,878 INFO app request path=/login method=POST status=303 latency_ms=68.3
+2026-02-05 07:48:53,879 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:53,884 INFO app request path=/assets method=GET status=200 latency_ms=2.0
+2026-02-05 07:48:53,886 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:48:54,041 INFO auth login success user_id=testuser
+2026-02-05 07:48:54,042 INFO app request path=/login method=POST status=303 latency_ms=73.7
+2026-02-05 07:48:54,046 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:54,054 INFO app request path=/requests method=GET status=200 latency_ms=6.6
+2026-02-05 07:48:54,055 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 07:48:54,211 INFO auth login success user_id=testuser
+2026-02-05 07:48:54,212 INFO app request path=/login method=POST status=303 latency_ms=71.2
+2026-02-05 07:48:54,214 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:54,222 INFO app request path=/plans/overdue method=GET status=200 latency_ms=7.1
+2026-02-05 07:48:54,223 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:48:54,228 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:48:54,229 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:48:54,230 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:48:54,232 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 07:48:54,381 INFO auth login success user_id=testuser
+2026-02-05 07:48:54,382 INFO app request path=/login method=POST status=303 latency_ms=71.2
+2026-02-05 07:48:54,383 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:54,388 INFO app request path=/assets method=GET status=200 latency_ms=2.0
+2026-02-05 07:48:54,390 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:48:54,539 INFO auth login success user_id=testuser
+2026-02-05 07:48:54,540 INFO app request path=/login method=POST status=303 latency_ms=71.6
+2026-02-05 07:48:54,542 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:54,547 INFO app request path=/plans/overdue method=GET status=200 latency_ms=3.1
+2026-02-05 07:48:54,549 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:48:54,699 INFO auth login success user_id=testuser
+2026-02-05 07:48:54,700 INFO app request path=/login method=POST status=303 latency_ms=69.4
+2026-02-05 07:48:54,702 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:48:54,708 INFO app request path=/assets method=GET status=200 latency_ms=3.7
+2026-02-05 07:48:54,710 INFO httpx HTTP Request: GET http://testserver/assets?status=INV "HTTP/1.1 200 OK"
+2026-02-05 07:48:54,712 WARNING plan plan validation failed status=DONE reason=actual_date_required
+2026-02-05 07:48:54,713 INFO plan plan validation ok status=DONE
+2026-02-05 07:48:54,715 WARNING plan plan validation failed status=PLANNED reason=actuals_not_allowed
+2026-02-05 07:48:54,717 WARNING plan plan validation failed status=CANCELLED reason=actuals_not_allowed
+2026-02-05 07:48:54,718 WARNING plan plan validation failed reason=title_required
+2026-02-05 07:48:54,875 INFO transition request transition from=None to=RQ actor=tester result=allowed
+2026-02-05 07:48:54,875 WARNING transition request transition from=RQ to=RP actor=tester result=denied
+2026-02-05 07:48:54,878 INFO transition asset transition from=INV to=READY actor=tester result=allowed
+2026-02-05 07:48:54,879 WARNING transition asset transition from=INV to=USE actor=tester result=denied
+2026-02-05 07:53:00,951 INFO auth login success user_id=testuser
+2026-02-05 07:53:00,953 INFO app request path=/login method=POST status=303 latency_ms=83.8
+2026-02-05 07:53:00,954 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:00,963 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 07:53:00,963 INFO app request path=/login method=POST status=303 latency_ms=3.5
+2026-02-05 07:53:00,965 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:00,969 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:53:01,128 INFO auth login success user_id=testuser
+2026-02-05 07:53:01,129 INFO app request path=/login method=POST status=303 latency_ms=78.9
+2026-02-05 07:53:01,131 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:01,148 INFO app request path=/dashboard method=GET status=200 latency_ms=15.4
+2026-02-05 07:53:01,150 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:53:01,153 INFO app request path=/logout method=POST status=303 latency_ms=0.0
+2026-02-05 07:53:01,155 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 07:53:01,161 ERROR app db error path=/_test/db_error
+Traceback (most recent call last):
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\tests\test_error_handling.py", line 15, in _db_error
+    raise SQLAlchemyError("db boom")
+sqlalchemy.exc.SQLAlchemyError: db boom
+2026-02-05 07:53:01,164 INFO httpx HTTP Request: GET http://testserver/_test/db_error "HTTP/1.1 500 Internal Server Error"
+2026-02-05 07:53:01,168 ERROR app unexpected error path=/_test/unexpected_error
+Traceback (most recent call last):
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\tests\test_error_handling.py", line 30, in _unexpected_error
+    raise RuntimeError("boom")
+RuntimeError: boom
+2026-02-05 07:53:01,171 INFO httpx HTTP Request: GET http://testserver/_test/unexpected_error "HTTP/1.1 500 Internal Server Error"
+2026-02-05 07:53:01,337 INFO auth login success user_id=testuser
+2026-02-05 07:53:01,338 INFO app request path=/login method=POST status=303 latency_ms=74.7
+2026-02-05 07:53:01,340 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:01,349 INFO transition asset transition from=AssetStatus.INV to=READY actor=testuser result=allowed
+2026-02-05 07:53:01,352 INFO app request path=/assets/1/transition method=POST status=303 latency_ms=7.8
+2026-02-05 07:53:01,354 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:53:01,503 INFO auth login success user_id=testuser
+2026-02-05 07:53:01,504 INFO app request path=/login method=POST status=303 latency_ms=70.6
+2026-02-05 07:53:01,505 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:01,510 WARNING transition asset transition from=AssetStatus.INV to=USE actor=testuser result=denied
+2026-02-05 07:53:01,532 INFO app request path=/assets/1/transition method=POST status=409 latency_ms=23.5
+2026-02-05 07:53:01,534 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 409 Conflict"
+2026-02-05 07:53:01,687 INFO auth login success user_id=testuser
+2026-02-05 07:53:01,688 INFO app request path=/login method=POST status=303 latency_ms=70.9
+2026-02-05 07:53:01,690 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:01,698 INFO transition request transition from=RequestStatus.RQ to=OP actor=testuser result=allowed
+2026-02-05 07:53:01,699 INFO app request path=/requests/1/transition method=POST status=303 latency_ms=4.6
+2026-02-05 07:53:01,701 INFO httpx HTTP Request: POST http://testserver/requests/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:53:01,860 INFO auth login success user_id=testuser
+2026-02-05 07:53:01,861 INFO app request path=/login method=POST status=303 latency_ms=75.7
+2026-02-05 07:53:01,863 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:01,911 INFO plan plan validation ok status=DONE
+2026-02-05 07:53:01,913 INFO app request path=/plans/1/done method=POST status=303 latency_ms=46.8
+2026-02-05 07:53:01,916 INFO httpx HTTP Request: POST http://testserver/plans/1/done "HTTP/1.1 303 See Other"
+2026-02-05 07:53:02,082 INFO auth login success user_id=testuser
+2026-02-05 07:53:02,084 INFO app request path=/login method=POST status=303 latency_ms=75.0
+2026-02-05 07:53:02,086 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:02,090 INFO app request path=/assets/import method=POST status=303 latency_ms=1.7
+2026-02-05 07:53:02,091 INFO httpx HTTP Request: POST http://testserver/assets/import "HTTP/1.1 303 See Other"
+2026-02-05 07:53:02,096 INFO app request path=/assets method=GET status=200 latency_ms=2.7
+2026-02-05 07:53:02,097 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:53:02,264 INFO auth login success user_id=testuser
+2026-02-05 07:53:02,266 INFO app request path=/login method=POST status=303 latency_ms=79.6
+2026-02-05 07:53:02,267 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:02,274 INFO app request path=/dashboard method=GET status=200 latency_ms=4.2
+2026-02-05 07:53:02,276 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:53:02,428 INFO auth login success user_id=testuser
+2026-02-05 07:53:02,429 INFO app request path=/login method=POST status=303 latency_ms=75.7
+2026-02-05 07:53:02,431 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:02,437 INFO app request path=/assets method=GET status=200 latency_ms=2.2
+2026-02-05 07:53:02,439 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:53:02,589 INFO auth login success user_id=testuser
+2026-02-05 07:53:02,591 INFO app request path=/login method=POST status=303 latency_ms=74.3
+2026-02-05 07:53:02,592 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:02,614 INFO app request path=/requests method=GET status=200 latency_ms=19.1
+2026-02-05 07:53:02,616 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 07:53:02,785 INFO auth login success user_id=testuser
+2026-02-05 07:53:02,786 INFO app request path=/login method=POST status=303 latency_ms=79.7
+2026-02-05 07:53:02,788 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:02,809 INFO app request path=/plans/overdue method=GET status=200 latency_ms=19.2
+2026-02-05 07:53:02,810 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:53:02,967 INFO auth login success user_id=testuser
+2026-02-05 07:53:02,968 INFO app request path=/login method=POST status=303 latency_ms=75.7
+2026-02-05 07:53:02,970 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:02,993 INFO app request path=/assets/1 method=GET status=200 latency_ms=20.6
+2026-02-05 07:53:02,995 INFO httpx HTTP Request: GET http://testserver/assets/1 "HTTP/1.1 200 OK"
+2026-02-05 07:53:03,155 INFO auth login success user_id=testuser
+2026-02-05 07:53:03,156 INFO app request path=/login method=POST status=303 latency_ms=76.2
+2026-02-05 07:53:03,157 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:03,177 INFO app request path=/requests/1 method=GET status=200 latency_ms=15.2
+2026-02-05 07:53:03,179 INFO httpx HTTP Request: GET http://testserver/requests/1 "HTTP/1.1 200 OK"
+2026-02-05 07:53:03,332 INFO auth login success user_id=testuser
+2026-02-05 07:53:03,334 INFO app request path=/login method=POST status=303 latency_ms=74.2
+2026-02-05 07:53:03,335 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:03,353 INFO app request path=/plans/1 method=GET status=200 latency_ms=15.4
+2026-02-05 07:53:03,354 INFO httpx HTTP Request: GET http://testserver/plans/1 "HTTP/1.1 200 OK"
+2026-02-05 07:53:03,360 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:53:03,361 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:53:03,363 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:53:03,364 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 07:53:03,525 INFO auth login success user_id=testuser
+2026-02-05 07:53:03,526 INFO app request path=/login method=POST status=303 latency_ms=75.4
+2026-02-05 07:53:03,528 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:03,532 INFO app request path=/assets method=GET status=200 latency_ms=2.1
+2026-02-05 07:53:03,534 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:53:03,690 INFO auth login success user_id=testuser
+2026-02-05 07:53:03,691 INFO app request path=/login method=POST status=303 latency_ms=75.9
+2026-02-05 07:53:03,693 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:03,698 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.5
+2026-02-05 07:53:03,700 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:53:03,853 INFO auth login success user_id=testuser
+2026-02-05 07:53:03,854 INFO app request path=/login method=POST status=303 latency_ms=74.5
+2026-02-05 07:53:03,856 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:53:03,861 INFO app request path=/assets method=GET status=200 latency_ms=2.5
+2026-02-05 07:53:03,862 INFO httpx HTTP Request: GET http://testserver/assets?status=INV "HTTP/1.1 200 OK"
+2026-02-05 07:53:03,865 WARNING plan plan validation failed status=DONE reason=actual_date_required
+2026-02-05 07:53:03,866 INFO plan plan validation ok status=DONE
+2026-02-05 07:53:03,867 WARNING plan plan validation failed status=PLANNED reason=actuals_not_allowed
+2026-02-05 07:53:03,868 WARNING plan plan validation failed status=CANCELLED reason=actuals_not_allowed
+2026-02-05 07:53:03,870 WARNING plan plan validation failed reason=title_required
+2026-02-05 07:53:04,030 INFO transition request transition from=None to=RQ actor=tester result=allowed
+2026-02-05 07:53:04,031 WARNING transition request transition from=RQ to=RP actor=tester result=denied
+2026-02-05 07:53:04,032 INFO transition asset transition from=INV to=READY actor=tester result=allowed
+2026-02-05 07:53:04,036 WARNING transition asset transition from=INV to=USE actor=tester result=denied
+2026-02-05 07:59:47,099 INFO auth login success user_id=testuser
+2026-02-05 07:59:47,100 INFO app request path=/login method=POST status=303 latency_ms=105.6
+2026-02-05 07:59:47,101 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,109 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 07:59:47,109 INFO app request path=/login method=POST status=303 latency_ms=2.1
+2026-02-05 07:59:47,111 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,117 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,303 INFO auth login success user_id=testuser
+2026-02-05 07:59:47,304 INFO app request path=/login method=POST status=303 latency_ms=90.8
+2026-02-05 07:59:47,306 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,377 INFO app request path=/dashboard method=GET status=200 latency_ms=69.1
+2026-02-05 07:59:47,379 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:59:47,383 INFO app request path=/logout method=POST status=303 latency_ms=1.0
+2026-02-05 07:59:47,385 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,607 INFO auth login success user_id=testuser
+2026-02-05 07:59:47,607 INFO app request path=/login method=POST status=303 latency_ms=102.2
+2026-02-05 07:59:47,609 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,621 INFO app request path=/assets method=POST status=303 latency_ms=8.2
+2026-02-05 07:59:47,623 INFO httpx HTTP Request: POST http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,633 INFO app request path=/assets/2/edit method=POST status=303 latency_ms=6.5
+2026-02-05 07:59:47,634 INFO httpx HTTP Request: POST http://testserver/assets/2/edit "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,640 INFO app request path=/assets/2/delete method=POST status=303 latency_ms=3.0
+2026-02-05 07:59:47,641 INFO httpx HTTP Request: POST http://testserver/assets/2/delete "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,822 INFO auth login success user_id=testuser
+2026-02-05 07:59:47,823 INFO app request path=/login method=POST status=303 latency_ms=86.5
+2026-02-05 07:59:47,825 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,834 INFO app request path=/requests method=POST status=303 latency_ms=5.7
+2026-02-05 07:59:47,836 INFO httpx HTTP Request: POST http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,844 INFO app request path=/requests/1/edit method=POST status=303 latency_ms=5.4
+2026-02-05 07:59:47,846 INFO httpx HTTP Request: POST http://testserver/requests/1/edit "HTTP/1.1 303 See Other"
+2026-02-05 07:59:47,851 INFO app request path=/requests/1/delete method=POST status=303 latency_ms=2.0
+2026-02-05 07:59:47,853 INFO httpx HTTP Request: POST http://testserver/requests/1/delete "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,033 INFO auth login success user_id=testuser
+2026-02-05 07:59:48,034 INFO app request path=/login method=POST status=303 latency_ms=84.5
+2026-02-05 07:59:48,037 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,043 INFO plan plan validation ok status=PLANNED
+2026-02-05 07:59:48,046 INFO app request path=/plans method=POST status=303 latency_ms=6.6
+2026-02-05 07:59:48,048 INFO httpx HTTP Request: POST http://testserver/plans "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,058 INFO plan plan validation ok status=DONE
+2026-02-05 07:59:48,060 INFO app request path=/plans/1/edit method=POST status=303 latency_ms=6.3
+2026-02-05 07:59:48,061 INFO httpx HTTP Request: POST http://testserver/plans/1/edit "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,068 INFO app request path=/plans/1/delete method=POST status=303 latency_ms=3.9
+2026-02-05 07:59:48,069 INFO httpx HTTP Request: POST http://testserver/plans/1/delete "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,076 ERROR app db error path=/_test/db_error
+Traceback (most recent call last):
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\tests\test_error_handling.py", line 15, in _db_error
+    raise SQLAlchemyError("db boom")
+sqlalchemy.exc.SQLAlchemyError: db boom
+2026-02-05 07:59:48,077 INFO httpx HTTP Request: GET http://testserver/_test/db_error "HTTP/1.1 500 Internal Server Error"
+2026-02-05 07:59:48,082 ERROR app unexpected error path=/_test/unexpected_error
+Traceback (most recent call last):
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\tests\test_error_handling.py", line 30, in _unexpected_error
+    raise RuntimeError("boom")
+RuntimeError: boom
+2026-02-05 07:59:48,084 INFO httpx HTTP Request: GET http://testserver/_test/unexpected_error "HTTP/1.1 500 Internal Server Error"
+2026-02-05 07:59:48,264 INFO auth login success user_id=testuser
+2026-02-05 07:59:48,265 INFO app request path=/login method=POST status=303 latency_ms=87.4
+2026-02-05 07:59:48,268 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,276 INFO transition asset transition from=AssetStatus.INV to=READY actor=testuser result=allowed
+2026-02-05 07:59:48,278 INFO app request path=/assets/1/transition method=POST status=303 latency_ms=6.2
+2026-02-05 07:59:48,280 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,453 INFO auth login success user_id=testuser
+2026-02-05 07:59:48,453 INFO app request path=/login method=POST status=303 latency_ms=81.5
+2026-02-05 07:59:48,456 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,461 WARNING transition asset transition from=AssetStatus.INV to=USE actor=testuser result=denied
+2026-02-05 07:59:48,482 INFO app request path=/assets/1/transition method=POST status=409 latency_ms=23.6
+2026-02-05 07:59:48,485 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 409 Conflict"
+2026-02-05 07:59:48,657 INFO auth login success user_id=testuser
+2026-02-05 07:59:48,657 INFO app request path=/login method=POST status=303 latency_ms=85.9
+2026-02-05 07:59:48,659 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,673 INFO transition request transition from=RequestStatus.RQ to=OP actor=testuser result=allowed
+2026-02-05 07:59:48,676 INFO app request path=/requests/1/transition method=POST status=303 latency_ms=7.7
+2026-02-05 07:59:48,677 INFO httpx HTTP Request: POST http://testserver/requests/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,847 INFO auth login success user_id=testuser
+2026-02-05 07:59:48,847 INFO app request path=/login method=POST status=303 latency_ms=80.2
+2026-02-05 07:59:48,849 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:48,857 INFO plan plan validation ok status=DONE
+2026-02-05 07:59:48,859 INFO app request path=/plans/1/done method=POST status=303 latency_ms=4.4
+2026-02-05 07:59:48,861 INFO httpx HTTP Request: POST http://testserver/plans/1/done "HTTP/1.1 303 See Other"
+2026-02-05 07:59:49,040 INFO auth login success user_id=testuser
+2026-02-05 07:59:49,041 INFO app request path=/login method=POST status=303 latency_ms=95.4
+2026-02-05 07:59:49,043 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:49,051 INFO app request path=/assets/import method=POST status=303 latency_ms=2.7
+2026-02-05 07:59:49,053 INFO httpx HTTP Request: POST http://testserver/assets/import "HTTP/1.1 303 See Other"
+2026-02-05 07:59:49,059 INFO app request path=/assets method=GET status=200 latency_ms=3.0
+2026-02-05 07:59:49,062 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:59:49,273 INFO auth login success user_id=testuser
+2026-02-05 07:59:49,273 INFO app request path=/login method=POST status=303 latency_ms=82.6
+2026-02-05 07:59:49,276 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:49,284 INFO app request path=/dashboard method=GET status=200 latency_ms=4.0
+2026-02-05 07:59:49,286 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 07:59:49,449 INFO auth login success user_id=testuser
+2026-02-05 07:59:49,449 INFO app request path=/login method=POST status=303 latency_ms=80.7
+2026-02-05 07:59:49,451 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:49,456 INFO app request path=/assets method=GET status=200 latency_ms=2.0
+2026-02-05 07:59:49,457 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:59:49,611 INFO auth login success user_id=testuser
+2026-02-05 07:59:49,612 INFO app request path=/login method=POST status=303 latency_ms=76.1
+2026-02-05 07:59:49,613 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:49,633 INFO app request path=/requests method=GET status=200 latency_ms=17.0
+2026-02-05 07:59:49,635 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 07:59:49,810 INFO auth login success user_id=testuser
+2026-02-05 07:59:49,811 INFO app request path=/login method=POST status=303 latency_ms=81.0
+2026-02-05 07:59:49,813 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:49,837 INFO app request path=/plans/overdue method=GET status=200 latency_ms=20.9
+2026-02-05 07:59:49,839 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:59:50,003 INFO auth login success user_id=testuser
+2026-02-05 07:59:50,003 INFO app request path=/login method=POST status=303 latency_ms=80.6
+2026-02-05 07:59:50,006 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:50,035 INFO app request path=/assets/1 method=GET status=200 latency_ms=26.4
+2026-02-05 07:59:50,038 INFO httpx HTTP Request: GET http://testserver/assets/1 "HTTP/1.1 200 OK"
+2026-02-05 07:59:50,201 INFO auth login success user_id=testuser
+2026-02-05 07:59:50,202 INFO app request path=/login method=POST status=303 latency_ms=78.7
+2026-02-05 07:59:50,205 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:50,233 INFO app request path=/requests/1 method=GET status=200 latency_ms=23.7
+2026-02-05 07:59:50,235 INFO httpx HTTP Request: GET http://testserver/requests/1 "HTTP/1.1 200 OK"
+2026-02-05 07:59:50,396 INFO auth login success user_id=testuser
+2026-02-05 07:59:50,396 INFO app request path=/login method=POST status=303 latency_ms=76.3
+2026-02-05 07:59:50,398 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:50,421 INFO app request path=/plans/1 method=GET status=200 latency_ms=18.1
+2026-02-05 07:59:50,424 INFO httpx HTTP Request: GET http://testserver/plans/1 "HTTP/1.1 200 OK"
+2026-02-05 07:59:50,428 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 07:59:50,430 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 07:59:50,432 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 07:59:50,435 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 07:59:50,607 INFO auth login success user_id=testuser
+2026-02-05 07:59:50,607 INFO app request path=/login method=POST status=303 latency_ms=85.0
+2026-02-05 07:59:50,609 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:50,616 INFO app request path=/assets method=GET status=200 latency_ms=2.8
+2026-02-05 07:59:50,617 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 07:59:50,799 INFO auth login success user_id=testuser
+2026-02-05 07:59:50,801 INFO app request path=/login method=POST status=303 latency_ms=86.6
+2026-02-05 07:59:50,803 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:50,806 INFO app request path=/plans/overdue method=GET status=200 latency_ms=2.5
+2026-02-05 07:59:50,807 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 07:59:50,993 INFO auth login success user_id=testuser
+2026-02-05 07:59:50,994 INFO app request path=/login method=POST status=303 latency_ms=79.5
+2026-02-05 07:59:50,997 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 07:59:51,003 INFO app request path=/assets method=GET status=200 latency_ms=3.2
+2026-02-05 07:59:51,004 INFO httpx HTTP Request: GET http://testserver/assets?status=INV "HTTP/1.1 200 OK"
+2026-02-05 07:59:51,007 WARNING plan plan validation failed status=DONE reason=actual_date_required
+2026-02-05 07:59:51,008 INFO plan plan validation ok status=DONE
+2026-02-05 07:59:51,009 WARNING plan plan validation failed status=PLANNED reason=actuals_not_allowed
+2026-02-05 07:59:51,010 WARNING plan plan validation failed status=CANCELLED reason=actuals_not_allowed
+2026-02-05 07:59:51,012 WARNING plan plan validation failed reason=title_required
+2026-02-05 07:59:51,184 INFO transition request transition from=None to=RQ actor=tester result=allowed
+2026-02-05 07:59:51,186 WARNING transition request transition from=RQ to=RP actor=tester result=denied
+2026-02-05 07:59:51,187 INFO transition asset transition from=INV to=READY actor=tester result=allowed
+2026-02-05 07:59:51,188 WARNING transition asset transition from=INV to=USE actor=tester result=denied
+2026-02-05 08:00:12,872 INFO auth login success user_id=testuser
+2026-02-05 08:00:12,873 INFO app request path=/login method=POST status=303 latency_ms=77.1
+2026-02-05 08:00:12,875 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:12,883 INFO auth login failed user_id=wrong reason=not_found
+2026-02-05 08:00:12,884 INFO app request path=/login method=POST status=303 latency_ms=3.3
+2026-02-05 08:00:12,885 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:12,890 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,043 INFO auth login success user_id=testuser
+2026-02-05 08:00:13,044 INFO app request path=/login method=POST status=303 latency_ms=70.9
+2026-02-05 08:00:13,046 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,062 INFO app request path=/dashboard method=GET status=200 latency_ms=15.2
+2026-02-05 08:00:13,065 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 08:00:13,067 INFO app request path=/logout method=POST status=303 latency_ms=1.0
+2026-02-05 08:00:13,068 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,236 INFO auth login success user_id=testuser
+2026-02-05 08:00:13,237 INFO app request path=/login method=POST status=303 latency_ms=79.9
+2026-02-05 08:00:13,239 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,247 INFO app request path=/assets method=POST status=303 latency_ms=6.4
+2026-02-05 08:00:13,248 INFO httpx HTTP Request: POST http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,258 INFO app request path=/assets/2/edit method=POST status=303 latency_ms=5.7
+2026-02-05 08:00:13,260 INFO httpx HTTP Request: POST http://testserver/assets/2/edit "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,266 INFO app request path=/assets/2/delete method=POST status=303 latency_ms=3.6
+2026-02-05 08:00:13,267 INFO httpx HTTP Request: POST http://testserver/assets/2/delete "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,422 INFO auth login success user_id=testuser
+2026-02-05 08:00:13,423 INFO app request path=/login method=POST status=303 latency_ms=75.1
+2026-02-05 08:00:13,424 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,473 INFO app request path=/requests method=POST status=303 latency_ms=45.5
+2026-02-05 08:00:13,476 INFO httpx HTTP Request: POST http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,488 INFO app request path=/requests/1/edit method=POST status=303 latency_ms=6.4
+2026-02-05 08:00:13,492 INFO httpx HTTP Request: POST http://testserver/requests/1/edit "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,500 INFO app request path=/requests/1/delete method=POST status=303 latency_ms=4.3
+2026-02-05 08:00:13,502 INFO httpx HTTP Request: POST http://testserver/requests/1/delete "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,691 INFO auth login success user_id=testuser
+2026-02-05 08:00:13,692 INFO app request path=/login method=POST status=303 latency_ms=107.0
+2026-02-05 08:00:13,694 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,701 INFO plan plan validation ok status=PLANNED
+2026-02-05 08:00:13,706 INFO app request path=/plans method=POST status=303 latency_ms=7.1
+2026-02-05 08:00:13,707 INFO httpx HTTP Request: POST http://testserver/plans "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,719 INFO plan plan validation ok status=DONE
+2026-02-05 08:00:13,721 INFO app request path=/plans/1/edit method=POST status=303 latency_ms=7.2
+2026-02-05 08:00:13,724 INFO httpx HTTP Request: POST http://testserver/plans/1/edit "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,730 INFO app request path=/plans/1/delete method=POST status=303 latency_ms=2.3
+2026-02-05 08:00:13,731 INFO httpx HTTP Request: POST http://testserver/plans/1/delete "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,736 ERROR app db error path=/_test/db_error
+Traceback (most recent call last):
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\tests\test_error_handling.py", line 15, in _db_error
+    raise SQLAlchemyError("db boom")
+sqlalchemy.exc.SQLAlchemyError: db boom
+2026-02-05 08:00:13,738 INFO httpx HTTP Request: GET http://testserver/_test/db_error "HTTP/1.1 500 Internal Server Error"
+2026-02-05 08:00:13,744 ERROR app unexpected error path=/_test/unexpected_error
+Traceback (most recent call last):
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 115, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 101, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 355, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\.venv\Lib\site-packages\fastapi\routing.py", line 243, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\kojin\090_daiku\repos\pc-management\tests\test_error_handling.py", line 30, in _unexpected_error
+    raise RuntimeError("boom")
+RuntimeError: boom
+2026-02-05 08:00:13,746 INFO httpx HTTP Request: GET http://testserver/_test/unexpected_error "HTTP/1.1 500 Internal Server Error"
+2026-02-05 08:00:13,917 INFO auth login success user_id=testuser
+2026-02-05 08:00:13,919 INFO app request path=/login method=POST status=303 latency_ms=82.5
+2026-02-05 08:00:13,921 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:13,931 INFO transition asset transition from=AssetStatus.INV to=READY actor=testuser result=allowed
+2026-02-05 08:00:13,933 INFO app request path=/assets/1/transition method=POST status=303 latency_ms=7.7
+2026-02-05 08:00:13,935 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 08:00:14,149 INFO auth login success user_id=testuser
+2026-02-05 08:00:14,149 INFO app request path=/login method=POST status=303 latency_ms=100.6
+2026-02-05 08:00:14,151 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:14,162 WARNING transition asset transition from=AssetStatus.INV to=USE actor=testuser result=denied
+2026-02-05 08:00:14,171 INFO app request path=/assets/1/transition method=POST status=409 latency_ms=13.1
+2026-02-05 08:00:14,172 INFO httpx HTTP Request: POST http://testserver/assets/1/transition "HTTP/1.1 409 Conflict"
+2026-02-05 08:00:14,333 INFO auth login success user_id=testuser
+2026-02-05 08:00:14,334 INFO app request path=/login method=POST status=303 latency_ms=83.2
+2026-02-05 08:00:14,337 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:14,344 INFO transition request transition from=RequestStatus.RQ to=OP actor=testuser result=allowed
+2026-02-05 08:00:14,345 INFO app request path=/requests/1/transition method=POST status=303 latency_ms=4.6
+2026-02-05 08:00:14,347 INFO httpx HTTP Request: POST http://testserver/requests/1/transition "HTTP/1.1 303 See Other"
+2026-02-05 08:00:14,515 INFO auth login success user_id=testuser
+2026-02-05 08:00:14,516 INFO app request path=/login method=POST status=303 latency_ms=78.5
+2026-02-05 08:00:14,518 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:14,526 INFO plan plan validation ok status=DONE
+2026-02-05 08:00:14,527 INFO app request path=/plans/1/done method=POST status=303 latency_ms=5.4
+2026-02-05 08:00:14,528 INFO httpx HTTP Request: POST http://testserver/plans/1/done "HTTP/1.1 303 See Other"
+2026-02-05 08:00:14,688 INFO auth login success user_id=testuser
+2026-02-05 08:00:14,689 INFO app request path=/login method=POST status=303 latency_ms=80.6
+2026-02-05 08:00:14,691 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:14,694 INFO app request path=/assets/import method=POST status=303 latency_ms=1.2
+2026-02-05 08:00:14,695 INFO httpx HTTP Request: POST http://testserver/assets/import "HTTP/1.1 303 See Other"
+2026-02-05 08:00:14,700 INFO app request path=/assets method=GET status=200 latency_ms=2.1
+2026-02-05 08:00:14,701 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 08:00:14,890 INFO auth login success user_id=testuser
+2026-02-05 08:00:14,892 INFO app request path=/login method=POST status=303 latency_ms=96.7
+2026-02-05 08:00:14,894 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:14,902 INFO app request path=/dashboard method=GET status=200 latency_ms=5.1
+2026-02-05 08:00:14,905 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-05 08:00:15,087 INFO auth login success user_id=testuser
+2026-02-05 08:00:15,088 INFO app request path=/login method=POST status=303 latency_ms=73.7
+2026-02-05 08:00:15,090 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:15,094 INFO app request path=/assets method=GET status=200 latency_ms=2.0
+2026-02-05 08:00:15,096 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 08:00:15,251 INFO auth login success user_id=testuser
+2026-02-05 08:00:15,252 INFO app request path=/login method=POST status=303 latency_ms=75.1
+2026-02-05 08:00:15,253 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:15,265 INFO app request path=/requests method=GET status=200 latency_ms=10.3
+2026-02-05 08:00:15,267 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 200 OK"
+2026-02-05 08:00:15,430 INFO auth login success user_id=testuser
+2026-02-05 08:00:15,431 INFO app request path=/login method=POST status=303 latency_ms=77.3
+2026-02-05 08:00:15,433 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:15,446 INFO app request path=/plans/overdue method=GET status=200 latency_ms=10.8
+2026-02-05 08:00:15,447 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 08:00:15,607 INFO auth login success user_id=testuser
+2026-02-05 08:00:15,608 INFO app request path=/login method=POST status=303 latency_ms=73.0
+2026-02-05 08:00:15,610 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:15,621 INFO app request path=/assets/1 method=GET status=200 latency_ms=8.7
+2026-02-05 08:00:15,623 INFO httpx HTTP Request: GET http://testserver/assets/1 "HTTP/1.1 200 OK"
+2026-02-05 08:00:15,777 INFO auth login success user_id=testuser
+2026-02-05 08:00:15,778 INFO app request path=/login method=POST status=303 latency_ms=74.8
+2026-02-05 08:00:15,779 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:15,789 INFO app request path=/requests/1 method=GET status=200 latency_ms=7.3
+2026-02-05 08:00:15,792 INFO httpx HTTP Request: GET http://testserver/requests/1 "HTTP/1.1 200 OK"
+2026-02-05 08:00:15,947 INFO auth login success user_id=testuser
+2026-02-05 08:00:15,948 INFO app request path=/login method=POST status=303 latency_ms=76.0
+2026-02-05 08:00:15,950 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:15,958 INFO app request path=/plans/1 method=GET status=200 latency_ms=5.4
+2026-02-05 08:00:15,961 INFO httpx HTTP Request: GET http://testserver/plans/1 "HTTP/1.1 200 OK"
+2026-02-05 08:00:15,965 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-05 08:00:15,966 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 303 See Other"
+2026-02-05 08:00:15,968 INFO httpx HTTP Request: GET http://testserver/requests "HTTP/1.1 303 See Other"
+2026-02-05 08:00:15,969 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 303 See Other"
+2026-02-05 08:00:16,129 INFO auth login success user_id=testuser
+2026-02-05 08:00:16,130 INFO app request path=/login method=POST status=303 latency_ms=76.7
+2026-02-05 08:00:16,132 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:16,135 INFO app request path=/assets method=GET status=200 latency_ms=2.5
+2026-02-05 08:00:16,136 INFO httpx HTTP Request: GET http://testserver/assets "HTTP/1.1 200 OK"
+2026-02-05 08:00:16,288 INFO auth login success user_id=testuser
+2026-02-05 08:00:16,290 INFO app request path=/login method=POST status=303 latency_ms=73.9
+2026-02-05 08:00:16,292 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:16,295 INFO app request path=/plans/overdue method=GET status=200 latency_ms=1.1
+2026-02-05 08:00:16,298 INFO httpx HTTP Request: GET http://testserver/plans/overdue "HTTP/1.1 200 OK"
+2026-02-05 08:00:16,449 INFO auth login success user_id=testuser
+2026-02-05 08:00:16,450 INFO app request path=/login method=POST status=303 latency_ms=72.7
+2026-02-05 08:00:16,452 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-05 08:00:16,458 INFO app request path=/assets method=GET status=200 latency_ms=2.5
+2026-02-05 08:00:16,460 INFO httpx HTTP Request: GET http://testserver/assets?status=INV "HTTP/1.1 200 OK"
+2026-02-05 08:00:16,462 WARNING plan plan validation failed status=DONE reason=actual_date_required
+2026-02-05 08:00:16,463 INFO plan plan validation ok status=DONE
+2026-02-05 08:00:16,464 WARNING plan plan validation failed status=PLANNED reason=actuals_not_allowed
+2026-02-05 08:00:16,466 WARNING plan plan validation failed status=CANCELLED reason=actuals_not_allowed
+2026-02-05 08:00:16,467 WARNING plan plan validation failed reason=title_required
+2026-02-05 08:00:16,625 INFO transition request transition from=None to=RQ actor=tester result=allowed
+2026-02-05 08:00:16,628 WARNING transition request transition from=RQ to=RP actor=tester result=denied
+2026-02-05 08:00:16,628 INFO transition asset transition from=INV to=READY actor=tester result=allowed
+2026-02-05 08:00:16,630 WARNING transition asset transition from=INV to=USE actor=tester result=denied
