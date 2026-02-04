@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 
 from app.db import get_db
-from app.models import PcRequest, PcStatusHistory, RequestStatus
+from app.models import REQUEST_STATUS_LABELS, PcRequest, PcStatusHistory, RequestStatus
 from app.status_rules import list_allowed_request_targets
 from app.transition_service import TransitionError, apply_request_transition
 from app.utils import add_flash, consume_flash
@@ -89,6 +89,7 @@ async def requests_list(
         {
             "flashes": flashes,
             **context,
+            "status_labels": REQUEST_STATUS_LABELS,
         },
     )
 
@@ -118,7 +119,7 @@ async def request_transition(
         return request.app.state.templates.TemplateResponse(
             request,
             "requests.html",
-            {"flashes": flashes, **context},
+            {"flashes": flashes, **context, "status_labels": REQUEST_STATUS_LABELS},
             status_code=409,
         )
 
@@ -284,6 +285,7 @@ async def request_detail(request: Request, request_id: int, db: Session = Depend
             "flashes": flashes,
             "request_item": req,
             "history": history,
+            "status_labels": REQUEST_STATUS_LABELS,
         },
     )
 

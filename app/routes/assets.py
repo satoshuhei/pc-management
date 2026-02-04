@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 
 from app.db import get_db
-from app.models import AssetStatus, PcAsset, PcStatusHistory
+from app.models import ASSET_STATUS_LABELS, AssetStatus, PcAsset, PcStatusHistory
 from app.status_rules import list_allowed_asset_targets
 from app.transition_service import TransitionError, apply_asset_transition
 from app.utils import add_flash, consume_flash
@@ -83,6 +83,7 @@ async def assets(
         {
             "flashes": flashes,
             **context,
+            "status_labels": ASSET_STATUS_LABELS,
         },
     )
 
@@ -112,7 +113,7 @@ async def asset_transition(
         return request.app.state.templates.TemplateResponse(
             request,
             "assets.html",
-            {"flashes": flashes, **context},
+            {"flashes": flashes, **context, "status_labels": ASSET_STATUS_LABELS},
             status_code=409,
         )
 
@@ -319,6 +320,7 @@ async def asset_detail(request: Request, asset_id: int, db: Session = Depends(ge
             "flashes": flashes,
             "asset": asset,
             "history": history,
+            "status_labels": ASSET_STATUS_LABELS,
         },
     )
 

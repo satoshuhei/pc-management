@@ -150,3 +150,21 @@ def test_search_flash_message():
     assert res.status_code == 200
     assert "検索条件を適用しました。" in res.text
     app.dependency_overrides.clear()
+
+
+def test_status_labels_rendered_in_pages():
+    client = _login_client()
+
+    res_assets = client.get("/assets", follow_redirects=True)
+    assert res_assets.status_code == 200
+    assert "未利用在庫" in res_assets.text
+
+    res_requests = client.get("/requests", follow_redirects=True)
+    assert res_requests.status_code == 200
+    assert "要望受付" in res_requests.text
+
+    res_plans = client.get("/plans/1", follow_redirects=True)
+    assert res_plans.status_code == 200
+    assert "予定" in res_plans.text
+
+    app.dependency_overrides.clear()
