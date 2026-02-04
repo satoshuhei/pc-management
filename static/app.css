@@ -29,11 +29,11 @@ tr:last-child td { border-bottom: none; }
 input, select, textarea { border: 1px solid #ccd3de; border-radius: 6px; padding: 6px 8px; font-size: 14px; }
 .dashboard-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .dashboard-grid .panel { max-width: none; }
-.assets-layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 16px; align-items: start; }
-.search-panel h2 { margin-top: 0; }
+.assets-layout { display: flex; flex-direction: column; gap: 16px; }
+.filter-panel { max-width: none; }
+.filter-header h2 { margin: 0 0 8px; }
 .panel-section { margin-top: 16px; padding-top: 12px; border-top: 1px solid #e6e9ef; }
 .list-panel { display: flex; flex-direction: column; gap: 8px; }
-.list-header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
-.list-header h2 { margin: 0; }
+.list-header { display: flex; align-items: baseline; justify-content: flex-end; gap: 12px; }
 .list-scroll { max-height: 520px; overflow: auto; border-radius: 8px; }
 .list-scroll table { box-shadow: none; border-radius: 0; }

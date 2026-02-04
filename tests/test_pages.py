@@ -187,7 +187,9 @@ def test_assets_layout_redmine_style():
     res = client.get("/assets", follow_redirects=True)
     assert res.status_code == 200
     assert "assets-layout" in res.text
-    assert "検索条件" in res.text
-    assert "チケット一覧" in res.text
+    assert "filter-panel" in res.text
+    assert "フィルタ" in res.text
+    assert "資産No" in res.text
+    assert "チケット一覧" not in res.text
     assert "list-scroll" in res.text
     app.dependency_overrides.clear()
