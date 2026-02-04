@@ -15,7 +15,7 @@
 </form>
 <table>
   <thead>
-    <tr><th>ID</th><th>種別</th><th>対象ID</th><th>タイトル</th><th>予定日</th><th>担当予定者</th></tr>
+    <tr><th>ID</th><th>種別</th><th>対象ID</th><th>タイトル</th><th>予定日</th><th>担当予定者</th><th>操作</th></tr>
   </thead>
   <tbody>
     {% for plan in plans %}
@@ -26,9 +26,15 @@
         <td>{{ plan.title }}</td>
         <td>{{ plan.planned_date }}</td>
         <td>{{ plan.planned_owner or "" }}</td>
+        <td>
+          <form method="post" action="/plans/{{ plan.id }}/done">
+            <input type="text" name="result_note" placeholder="実績メモ" />
+            <button type="submit">完了</button>
+          </form>
+        </td>
       </tr>
     {% else %}
-      <tr><td colspan="6">期限超過の予定はありません。</td></tr>
+      <tr><td colspan="7">期限超過の予定はありません。</td></tr>
     {% endfor %}
   </tbody>
 </table>

@@ -19,7 +19,7 @@
 </form>
 <table>
   <thead>
-    <tr><th>ID</th><th>資産タグ</th><th>状態</th><th>利用者</th><th>場所</th></tr>
+    <tr><th>ID</th><th>資産タグ</th><th>状態</th><th>利用者</th><th>場所</th><th>状態遷移</th></tr>
   </thead>
   <tbody>
     {% for asset in assets %}
@@ -29,9 +29,20 @@
         <td>{{ asset.status }}</td>
         <td>{{ asset.current_user or "" }}</td>
         <td>{{ asset.location or "" }}</td>
+        <td>
+          <form method="post" action="/assets/{{ asset.id }}/transition">
+            <select name="to_status" required>
+              {% for target in targets[asset.id] %}
+                <option value="{{ target }}">{{ target }}</option>
+              {% endfor %}
+            </select>
+            <input type="text" name="reason" placeholder="理由" />
+            <button type="submit">更新</button>
+          </form>
+        </td>
       </tr>
     {% else %}
-      <tr><td colspan="5">データがありません。</td></tr>
+      <tr><td colspan="6">データがありません。</td></tr>
     {% endfor %}
   </tbody>
 </table>

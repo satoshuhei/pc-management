@@ -15,7 +15,7 @@
 </form>
 <table>
   <thead>
-    <tr><th>ID</th><th>ステータス</th><th>申請者</th><th>資産ID</th></tr>
+    <tr><th>ID</th><th>ステータス</th><th>申請者</th><th>資産ID</th><th>状態遷移</th></tr>
   </thead>
   <tbody>
     {% for req in requests %}
@@ -24,9 +24,20 @@
         <td>{{ req.status }}</td>
         <td>{{ req.requester or "" }}</td>
         <td>{{ req.asset_id or "" }}</td>
+        <td>
+          <form method="post" action="/requests/{{ req.id }}/transition">
+            <select name="to_status" required>
+              {% for target in targets[req.id] %}
+                <option value="{{ target }}">{{ target }}</option>
+              {% endfor %}
+            </select>
+            <input type="text" name="reason" placeholder="理由" />
+            <button type="submit">更新</button>
+          </form>
+        </td>
       </tr>
     {% else %}
-      <tr><td colspan="4">データがありません。</td></tr>
+      <tr><td colspan="5">データがありません。</td></tr>
     {% endfor %}
   </tbody>
 </table>
