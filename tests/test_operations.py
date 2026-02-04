@@ -175,3 +175,15 @@ def test_plan_done_updates_actuals():
     assert updated.actual_date is not None
     assert updated.actual_owner == "testuser"
     app.dependency_overrides.clear()
+
+
+def test_assets_import_shows_flash():
+    client = _login_client()
+    res = client.post(
+        "/assets/import",
+        files={"file": ("sample.csv", b"id,tag\n1,AST-1\n", "text/csv")},
+        follow_redirects=True,
+    )
+    assert res.status_code == 200
+    assert "インポート機能は準備中です。" in res.text
+    app.dependency_overrides.clear()

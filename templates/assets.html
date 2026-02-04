@@ -17,6 +17,13 @@
   </label>
   <button type="submit">検索</button>
 </form>
+<form method="post" action="/assets/import" class="form" enctype="multipart/form-data">
+  <label>
+    インポート（CSV）
+    <input type="file" name="file" accept=".csv" />
+  </label>
+  <button type="submit">インポート</button>
+</form>
 <table>
   <thead>
     <tr><th>ID</th><th>資産タグ</th><th>状態</th><th>利用者</th><th>場所</th><th>状態遷移</th></tr>

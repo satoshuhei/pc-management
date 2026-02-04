@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends, Form, Request
+from fastapi import APIRouter, Depends, File, Form, Request, UploadFile
 from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
@@ -104,4 +104,16 @@ async def asset_transition(
     db.commit()
 
     add_flash(request.session, "success", "状態を更新しました。")
+    return RedirectResponse(url="/assets", status_code=303)
+
+
+@router.post("/assets/import")
+async def assets_import(
+    request: Request,
+    file: UploadFile | None = File(None),
+):
+    if file is None:
+        add_flash(request.session, "warning", "インポートするファイルを選択してください。")
+    else:
+        add_flash(request.session, "warning", "インポート機能は準備中です。")
     return RedirectResponse(url="/assets", status_code=303)
