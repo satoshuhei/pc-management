@@ -2,6 +2,17 @@
 {% block content %}
 <h1>期限超過予定一覧</h1>
 <p>期限超過の予定を表示します。</p>
+<form method="get" class="form">
+  <label>
+    担当予定者
+    <input type="text" name="planned_owner" value="{{ filters.planned_owner }}" />
+  </label>
+  <label>
+    タイトル
+    <input type="text" name="title" value="{{ filters.title }}" />
+  </label>
+  <button type="submit">検索</button>
+</form>
 <table>
   <thead>
     <tr><th>ID</th><th>種別</th><th>対象ID</th><th>タイトル</th><th>予定日</th><th>担当予定者</th></tr>

@@ -2,6 +2,17 @@
 {% block content %}
 <h1>要求一覧</h1>
 <p>要求の一覧を表示します。</p>
+<form method="get" class="form">
+  <label>
+    ステータス
+    <input type="text" name="status" value="{{ filters.status }}" placeholder="RQ/OP/RP" />
+  </label>
+  <label>
+    申請者
+    <input type="text" name="requester" value="{{ filters.requester }}" />
+  </label>
+  <button type="submit">検索</button>
+</form>
 <table>
   <thead>
     <tr><th>ID</th><th>ステータス</th><th>申請者</th><th>資産ID</th></tr>

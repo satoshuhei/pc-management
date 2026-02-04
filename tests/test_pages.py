@@ -139,3 +139,11 @@ def test_plans_overdue_renders_data():
     assert res.status_code == 200
     assert "期限超過テスト" in res.text
     app.dependency_overrides.clear()
+
+
+def test_search_flash_message():
+    client = _login_client()
+    res = client.get("/assets?status=INV", follow_redirects=True)
+    assert res.status_code == 200
+    assert "検索条件を適用しました。" in res.text
+    app.dependency_overrides.clear()
