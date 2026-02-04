@@ -14,6 +14,9 @@ from app.config import get_settings
 from app.logging_config import setup_logging
 from app.routes import auth as auth_routes
 from app.routes import dashboard as dashboard_routes
+from app.routes import assets as assets_routes
+from app.routes import requests as requests_routes
+from app.routes import plans as plans_routes
 from app.utils import add_flash, format_jst
 
 setup_logging()
@@ -22,12 +25,15 @@ settings = get_settings()
 
 app = FastAPI()
 
-app.mount("/assets", StaticFiles(directory="static"), name="assets")
+app.mount("/static", StaticFiles(directory="static"), name="static")
 app.state.templates = Jinja2Templates(directory="templates")
 app.state.templates.env.filters["format_jst"] = format_jst
 
 app.include_router(auth_routes.router)
 app.include_router(dashboard_routes.router)
+app.include_router(assets_routes.router)
+app.include_router(requests_routes.router)
+app.include_router(plans_routes.router)
 
 
 @app.middleware("http")
@@ -48,7 +54,7 @@ async def request_logging_middleware(request: Request, call_next: Callable):
 @app.middleware("http")
 async def auth_guard_middleware(request: Request, call_next: Callable):
     path = request.url.path
-    if path.startswith("/assets") or path in {"/login"}:
+    if path.startswith("/static") or path in {"/login", "/favicon.ico"}:
         return await call_next(request)
 
     if request.session.get("user_id"):

@@ -1,5 +1,44 @@
 {% extends "base.html" %}
 {% block content %}
 <h1>ダッシュボード</h1>
-<p>ここにステータスや予定の集計を表示します。</p>
+<p>ステータスや予定の集計を表示します。</p>
+
+<h2>資産ステータス</h2>
+<table>
+	<thead>
+		<tr><th>ステータス</th><th>件数</th></tr>
+	</thead>
+	<tbody>
+		{% for status, count in asset_summary.items() %}
+			<tr><td>{{ status }}</td><td>{{ count }}</td></tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+<h2>要求ステータス</h2>
+<table>
+	<thead>
+		<tr><th>ステータス</th><th>件数</th></tr>
+	</thead>
+	<tbody>
+		{% for status, count in request_summary.items() %}
+			<tr><td>{{ status }}</td><td>{{ count }}</td></tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+<h2>予定ステータス</h2>
+<table>
+	<thead>
+		<tr><th>ステータス</th><th>件数</th></tr>
+	</thead>
+	<tbody>
+		{% for status, count in plan_summary.items() %}
+			<tr><td>{{ status }}</td><td>{{ count }}</td></tr>
+		{% endfor %}
+	</tbody>
+</table>
+
+<h2>期限超過</h2>
+<p>期限超過予定の件数: {{ overdue_count }}</p>
 {% endblock %}

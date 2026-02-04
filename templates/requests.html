@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>要求一覧</h1>
+<p>要求の一覧を表示します。</p>
+<table>
+  <thead>
+    <tr><th>ID</th><th>ステータス</th><th>申請者</th><th>資産ID</th></tr>
+  </thead>
+  <tbody>
+    {% for req in requests %}
+      <tr>
+        <td>{{ req.id }}</td>
+        <td>{{ req.status }}</td>
+        <td>{{ req.requester or "" }}</td>
+        <td>{{ req.asset_id or "" }}</td>
+      </tr>
+    {% else %}
+      <tr><td colspan="4">データがありません。</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -4,12 +4,18 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>{{ title or "PC管理" }}</title>
-  <link rel="stylesheet" href="/assets/app.css" />
+  <link rel="stylesheet" href="/static/app.css" />
 </head>
 <body>
   <header class="header">
     <div class="title">PC管理システム</div>
     {% if request.session.get('display_name') %}
+      <nav class="nav">
+        <a href="/dashboard">ダッシュボード</a>
+        <a href="/assets">資産一覧</a>
+        <a href="/requests">要求一覧</a>
+        <a href="/plans/overdue">期限超過予定</a>
+      </nav>
       <div class="user">こんにちは、{{ request.session.get('display_name') }} さん</div>
       <form action="/logout" method="post">
         <button type="submit">ログアウト</button>

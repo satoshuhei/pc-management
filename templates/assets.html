@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>資産一覧</h1>
+<p>資産の一覧を表示します。</p>
+<table>
+  <thead>
+    <tr><th>ID</th><th>資産タグ</th><th>状態</th><th>利用者</th><th>場所</th></tr>
+  </thead>
+  <tbody>
+    {% for asset in assets %}
+      <tr>
+        <td>{{ asset.id }}</td>
+        <td>{{ asset.asset_tag }}</td>
+        <td>{{ asset.status }}</td>
+        <td>{{ asset.current_user or "" }}</td>
+        <td>{{ asset.location or "" }}</td>
+      </tr>
+    {% else %}
+      <tr><td colspan="5">データがありません。</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

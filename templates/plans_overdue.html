@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>期限超過予定一覧</h1>
+<p>期限超過の予定を表示します。</p>
+<table>
+  <thead>
+    <tr><th>ID</th><th>種別</th><th>対象ID</th><th>タイトル</th><th>予定日</th><th>担当予定者</th></tr>
+  </thead>
+  <tbody>
+    {% for plan in plans %}
+      <tr>
+        <td>{{ plan.id }}</td>
+        <td>{{ plan.entity_type }}</td>
+        <td>{{ plan.entity_id }}</td>
+        <td>{{ plan.title }}</td>
+        <td>{{ plan.planned_date }}</td>
+        <td>{{ plan.planned_owner or "" }}</td>
+      </tr>
+    {% else %}
+      <tr><td colspan="6">期限超過の予定はありません。</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
