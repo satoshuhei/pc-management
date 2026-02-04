@@ -180,3 +180,13 @@ def test_dashboard_layout_quadrants():
     assert "予定ステータス" in res.text
     assert "期限超過" in res.text
     app.dependency_overrides.clear()
+
+
+def test_assets_layout_redmine_style():
+    client = _login_client()
+    res = client.get("/assets", follow_redirects=True)
+    assert res.status_code == 200
+    assert "assets-layout" in res.text
+    assert "検索条件" in res.text
+    assert "チケット一覧" in res.text
+    app.dependency_overrides.clear()

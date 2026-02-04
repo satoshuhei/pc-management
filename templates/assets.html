@@ -10,63 +10,85 @@
     <a class="button" href="/assets/new">新規登録</a>
   </div>
 </div>
-<form method="get" class="form">
-  <label>
-    ステータス
-    <input type="text" name="status" value="{{ filters.status }}" placeholder="INV/READY..." />
-  </label>
-  <label>
-    資産タグ
-    <input type="text" name="asset_tag" value="{{ filters.asset_tag }}" />
-  </label>
-  <button type="submit" class="button">検索</button>
-    場所
-    <input type="text" name="location" value="{{ filters.location }}" />
-  </label>
-  <button type="submit">検索</button>
-</form>
+
 {% if filters.status or filters.asset_tag or filters.location %}
-  <button type="submit" class="button">インポート</button>
+  <div class="filter-summary">
     検索条件:
     {% if filters.status %}ステータス={{ filters.status }}{% endif %}
     {% if filters.asset_tag %} 資産タグ={{ filters.asset_tag }}{% endif %}
     {% if filters.location %} 場所={{ filters.location }}{% endif %}
   </div>
 {% endif %}
-<form method="post" action="/assets/import" class="form" enctype="multipart/form-data">
-  <label>
-    インポート（CSV）
-    <input type="file" name="file" accept=".csv" />
-  </label>
-  <button type="submit">インポート</button>
-</form>
-<table>
-  <thead>
-    <tr><th>ID</th><th>資産タグ</th><th>状態</th><th>利用者</th><th>場所</th><th>状態遷移</th></tr>
-  </thead>
-  <tbody>
-    {% for asset in assets %}
-      <tr>
-        <td><a href="/assets/{{ asset.id }}">{{ asset.id }}</a></td>
-        <td>{{ asset.asset_tag }}</td>
-        <td>{{ asset.status }}</td>
-        <td>{{ asset.current_user or "" }}</td>
-        <td>{{ asset.location or "" }}</td>
-        <td>
-          <form method="post" action="/assets/{{ asset.id }}/transition">
-            <select name="to_status" required>
-              {% for target in targets[asset.id] %}
-                <option value="{{ target }}">{{ target }}</option>
-              {% endfor %}
-            </select>
-            <input type="text" name="reason" placeholder="理由" />
-            <button type="submit" class="button">更新</button>
-          </form>
-        </td>
-      </tr>
-    {% else %}
-      <tr><td colspan="6">データがありません。</td></tr>
-    {% endfor %}
-  </tbody>
-</table>
+
+<div class="assets-layout">
+  <aside class="search-panel panel">
+    <h2>検索条件</h2>
+    <form method="get" class="form">
+      <label>
+        ステータス
+        <input type="text" name="status" value="{{ filters.status }}" placeholder="INV/READY..." />
+      </label>
+      <label>
+        資産タグ
+        <input type="text" name="asset_tag" value="{{ filters.asset_tag }}" />
+      </label>
+      <label>
+        場所
+        <input type="text" name="location" value="{{ filters.location }}" />
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="button">検索</button>
+      </div>
+    </form>
+
+    <div class="panel-section">
+      <h3>インポート</h3>
+      <form method="post" action="/assets/import" class="form" enctype="multipart/form-data">
+        <label>
+          インポート（CSV）
+          <input type="file" name="file" accept=".csv" />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="button">インポート</button>
+        </div>
+      </form>
+    </div>
+  </aside>
+
+  <section class="list-panel">
+    <div class="list-header">
+      <h2>チケット一覧</h2>
+      <span class="summary">件数: {{ assets | length }}</span>
+    </div>
+    <table>
+      <thead>
+        <tr><th>ID</th><th>資産タグ</th><th>状態</th><th>利用者</th><th>場所</th><th>状態遷移</th></tr>
+      </thead>
+      <tbody>
+        {% for asset in assets %}
+          <tr>
+            <td><a href="/assets/{{ asset.id }}">{{ asset.id }}</a></td>
+            <td>{{ asset.asset_tag }}</td>
+            <td>{{ status_labels.get(asset.status, asset.status) }}</td>
+            <td>{{ asset.current_user or "" }}</td>
+            <td>{{ asset.location or "" }}</td>
+            <td>
+              <form method="post" action="/assets/{{ asset.id }}/transition">
+                <select name="to_status" required>
+                  {% for target in targets[asset.id] %}
+                    <option value="{{ target }}">{{ target }}</option>
+                  {% endfor %}
+                </select>
+                <input type="text" name="reason" placeholder="理由" />
+                <button type="submit" class="button">更新</button>
+              </form>
+            </td>
+          </tr>
+        {% else %}
+          <tr><td colspan="6">データがありません。</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+</div>
 {% endblock %}
