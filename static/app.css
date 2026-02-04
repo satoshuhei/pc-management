@@ -35,3 +35,5 @@ input, select, textarea { border: 1px solid #ccd3de; border-radius: 6px; padding
 .list-panel { display: flex; flex-direction: column; gap: 8px; }
 .list-header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
 .list-header h2 { margin: 0; }
+.list-scroll { max-height: 520px; overflow: auto; border-radius: 8px; }
+.list-scroll table { box-shadow: none; border-radius: 0; }

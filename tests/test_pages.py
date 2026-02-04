@@ -189,4 +189,5 @@ def test_assets_layout_redmine_style():
     assert "assets-layout" in res.text
     assert "検索条件" in res.text
     assert "チケット一覧" in res.text
+    assert "list-scroll" in res.text
     app.dependency_overrides.clear()
