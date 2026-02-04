@@ -43,18 +43,6 @@
       </div>
     {% endif %}
 
-    <div class="panel-section">
-      <h3>インポート</h3>
-      <form method="post" action="/assets/import" class="form" enctype="multipart/form-data">
-        <label>
-          インポート（CSV）
-          <input type="file" name="file" accept=".csv" />
-        </label>
-        <div class="form-actions">
-          <button type="submit" class="button">インポート</button>
-        </div>
-      </form>
-    </div>
   </section>
 
   <section class="list-panel">
@@ -92,6 +80,19 @@
         </tbody>
       </table>
     </div>
+  </section>
+
+  <section class="import-panel panel">
+    <h3>インポート</h3>
+    <form method="post" action="/assets/import" class="form" enctype="multipart/form-data">
+      <label>
+        インポート（CSV）
+        <input type="file" name="file" accept=".csv" />
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="button">インポート</button>
+      </div>
+    </form>
   </section>
 </div>
 {% endblock %}
