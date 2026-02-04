@@ -27,7 +27,7 @@ def get_settings() -> Settings:
     return Settings(
         database_url=_get_env(
             "DATABASE_URL",
-            "mysql+mysqlconnector://pc_user:pc_pass@localhost:3306/pc_management",
+            "sqlite:///./pc_management.db",
         ),
         secret_key=_get_env("SECRET_KEY", "change-this-secret") or "change-this-secret",
         log_level=_get_env("LOG_LEVEL", "INFO") or "INFO",

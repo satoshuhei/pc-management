@@ -52,3 +52,20 @@ AttributeError: module 'bcrypt' has no attribute '__about__'
 2026-02-04 22:20:22,243 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
 2026-02-04 22:20:22,245 INFO app request path=/logout method=POST status=303 latency_ms=1.0
 2026-02-04 22:20:22,246 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
+2026-02-04 22:37:58,734 INFO app request path=/login method=GET status=200 latency_ms=15.5
+2026-02-04 22:37:58,837 INFO app request path=/assets/app.css method=GET status=200 latency_ms=52.5
+2026-02-04 22:37:58,883 INFO app request path=/login method=GET status=200 latency_ms=1.1
+2026-02-04 22:53:08,805 INFO auth login success user_id=testuser
+2026-02-04 22:53:08,806 INFO app request path=/login method=POST status=303 latency_ms=78.8
+2026-02-04 22:53:08,809 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-04 22:53:08,816 INFO auth login failed user_id=wrong reason=not_found
+2026-02-04 22:53:08,816 INFO app request path=/login method=POST status=303 latency_ms=2.5
+2026-02-04 22:53:08,817 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-04 22:53:08,822 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 303 See Other"
+2026-02-04 22:53:08,972 INFO auth login success user_id=testuser
+2026-02-04 22:53:08,974 INFO app request path=/login method=POST status=303 latency_ms=71.1
+2026-02-04 22:53:08,975 INFO httpx HTTP Request: POST http://testserver/login "HTTP/1.1 303 See Other"
+2026-02-04 22:53:08,984 INFO app request path=/dashboard method=GET status=200 latency_ms=6.8
+2026-02-04 22:53:08,985 INFO httpx HTTP Request: GET http://testserver/dashboard "HTTP/1.1 200 OK"
+2026-02-04 22:53:08,987 INFO app request path=/logout method=POST status=303 latency_ms=0.0
+2026-02-04 22:53:08,988 INFO httpx HTTP Request: POST http://testserver/logout "HTTP/1.1 303 See Other"
