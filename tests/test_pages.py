@@ -168,3 +168,15 @@ def test_status_labels_rendered_in_pages():
     assert "予定" in res_plans.text
 
     app.dependency_overrides.clear()
+
+
+def test_dashboard_layout_quadrants():
+    client = _login_client()
+    res = client.get("/dashboard", follow_redirects=True)
+    assert res.status_code == 200
+    assert "dashboard-grid" in res.text
+    assert "資産ステータス" in res.text
+    assert "要求ステータス" in res.text
+    assert "予定ステータス" in res.text
+    assert "期限超過" in res.text
+    app.dependency_overrides.clear()
