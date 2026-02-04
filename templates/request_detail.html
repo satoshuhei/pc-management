@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>要求詳細</h1>
+<table>
+  <tbody>
+    <tr><th>ID</th><td>{{ request_item.id }}</td></tr>
+    <tr><th>状態</th><td>{{ request_item.status }}</td></tr>
+    <tr><th>申請者</th><td>{{ request_item.requester or "" }}</td></tr>
+    <tr><th>メモ</th><td>{{ request_item.note or "" }}</td></tr>
+    <tr><th>資産ID</th><td>{{ request_item.asset_id or "" }}</td></tr>
+  </tbody>
+</table>
+
+<h2>状態履歴</h2>
+<table>
+  <thead>
+    <tr><th>変更日時</th><th>From</th><th>To</th><th>変更者</th><th>理由</th></tr>
+  </thead>
+  <tbody>
+    {% for row in history %}
+      <tr>
+        <td>{{ row.changed_at | format_jst }}</td>
+        <td>{{ row.from_status or "" }}</td>
+        <td>{{ row.to_status }}</td>
+        <td>{{ row.changed_by }}</td>
+        <td>{{ row.reason or "" }}</td>
+      </tr>
+    {% else %}
+      <tr><td colspan="5">履歴がありません。</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

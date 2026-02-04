@@ -20,7 +20,7 @@
   <tbody>
     {% for plan in plans %}
       <tr>
-        <td>{{ plan.id }}</td>
+        <td><a href="/plans/{{ plan.id }}">{{ plan.id }}</a></td>
         <td>{{ plan.entity_type }}</td>
         <td>{{ plan.entity_id }}</td>
         <td>{{ plan.title }}</td>

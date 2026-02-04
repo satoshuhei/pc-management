@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>資産詳細</h1>
+<table>
+  <tbody>
+    <tr><th>ID</th><td>{{ asset.id }}</td></tr>
+    <tr><th>資産タグ</th><td>{{ asset.asset_tag }}</td></tr>
+    <tr><th>シリアル</th><td>{{ asset.serial_no or "" }}</td></tr>
+    <tr><th>ホスト名</th><td>{{ asset.hostname or "" }}</td></tr>
+    <tr><th>状態</th><td>{{ asset.status }}</td></tr>
+    <tr><th>利用者</th><td>{{ asset.current_user or "" }}</td></tr>
+    <tr><th>場所</th><td>{{ asset.location or "" }}</td></tr>
+    <tr><th>メモ</th><td>{{ asset.notes or "" }}</td></tr>
+  </tbody>
+</table>
+
+<h2>状態履歴</h2>
+<table>
+  <thead>
+    <tr><th>変更日時</th><th>From</th><th>To</th><th>変更者</th><th>理由</th></tr>
+  </thead>
+  <tbody>
+    {% for row in history %}
+      <tr>
+        <td>{{ row.changed_at | format_jst }}</td>
+        <td>{{ row.from_status or "" }}</td>
+        <td>{{ row.to_status }}</td>
+        <td>{{ row.changed_by }}</td>
+        <td>{{ row.reason or "" }}</td>
+      </tr>
+    {% else %}
+      <tr><td colspan="5">履歴がありません。</td></tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

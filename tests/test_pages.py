@@ -105,6 +105,9 @@ def _login_client() -> TestClient:
     ("/assets", "資産一覧"),
     ("/requests", "要求一覧"),
     ("/plans/overdue", "期限超過予定一覧"),
+    ("/assets/1", "資産詳細"),
+    ("/requests/1", "要求詳細"),
+    ("/plans/1", "予定詳細"),
 ])
 def test_authenticated_pages_accessible(path, title):
     client = _login_client()

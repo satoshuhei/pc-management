@@ -100,3 +100,30 @@ async def request_transition(
 
     add_flash(request.session, "success", "状態を更新しました。")
     return RedirectResponse(url="/requests", status_code=303)
+
+
+@router.get("/requests/{request_id}")
+async def request_detail(request: Request, request_id: int, db: Session = Depends(get_db)):
+    req = db.query(PcRequest).filter(PcRequest.id == request_id).first()
+    if req is None:
+        add_flash(request.session, "error", "対象の要求が見つかりません。")
+        return RedirectResponse(url="/requests", status_code=303)
+
+    history = (
+        db.query(PcStatusHistory)
+        .filter(PcStatusHistory.entity_type == "REQUEST")
+        .filter(PcStatusHistory.entity_id == request_id)
+        .order_by(PcStatusHistory.changed_at.desc())
+        .all()
+    )
+
+    flashes = consume_flash(request.session)
+    return request.app.state.templates.TemplateResponse(
+        request,
+        "request_detail.html",
+        {
+            "flashes": flashes,
+            "request_item": req,
+            "history": history,
+        },
+    )

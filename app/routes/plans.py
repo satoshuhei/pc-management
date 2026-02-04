@@ -103,3 +103,21 @@ async def plan_done(
     db.commit()
     add_flash(request.session, "success", "予定を完了にしました。")
     return RedirectResponse(url="/plans/overdue", status_code=303)
+
+
+@router.get("/plans/{plan_id}")
+async def plan_detail(request: Request, plan_id: int, db: Session = Depends(get_db)):
+    plan = db.query(PcPlan).filter(PcPlan.id == plan_id).first()
+    if plan is None:
+        add_flash(request.session, "error", "対象の予定が見つかりません。")
+        return RedirectResponse(url="/plans/overdue", status_code=303)
+
+    flashes = consume_flash(request.session)
+    return request.app.state.templates.TemplateResponse(
+        request,
+        "plan_detail.html",
+        {
+            "flashes": flashes,
+            "plan": plan,
+        },
+    )

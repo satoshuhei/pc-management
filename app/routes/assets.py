@@ -107,6 +107,33 @@ async def asset_transition(
     return RedirectResponse(url="/assets", status_code=303)
 
 
+@router.get("/assets/{asset_id}")
+async def asset_detail(request: Request, asset_id: int, db: Session = Depends(get_db)):
+    asset = db.query(PcAsset).filter(PcAsset.id == asset_id).first()
+    if asset is None:
+        add_flash(request.session, "error", "対象の資産が見つかりません。")
+        return RedirectResponse(url="/assets", status_code=303)
+
+    history = (
+        db.query(PcStatusHistory)
+        .filter(PcStatusHistory.entity_type == "ASSET")
+        .filter(PcStatusHistory.entity_id == asset_id)
+        .order_by(PcStatusHistory.changed_at.desc())
+        .all()
+    )
+
+    flashes = consume_flash(request.session)
+    return request.app.state.templates.TemplateResponse(
+        request,
+        "asset_detail.html",
+        {
+            "flashes": flashes,
+            "asset": asset,
+            "history": history,
+        },
+    )
+
+
 @router.post("/assets/import")
 async def assets_import(
     request: Request,

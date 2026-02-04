@@ -31,7 +31,7 @@
   <tbody>
     {% for asset in assets %}
       <tr>
-        <td>{{ asset.id }}</td>
+        <td><a href="/assets/{{ asset.id }}">{{ asset.id }}</a></td>
         <td>{{ asset.asset_tag }}</td>
         <td>{{ asset.status }}</td>
         <td>{{ asset.current_user or "" }}</td>
