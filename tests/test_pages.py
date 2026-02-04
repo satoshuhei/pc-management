@@ -189,6 +189,7 @@ def test_assets_layout_redmine_style():
     assert "assets-layout" in res.text
     assert "filter-panel" in res.text
     assert "フィルタ" in res.text
+    assert "状態" in res.text
     assert "資産No" in res.text
     assert "チケット一覧" not in res.text
     assert "list-scroll" in res.text

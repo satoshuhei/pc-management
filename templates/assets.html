@@ -17,18 +17,20 @@
       <h2>フィルタ</h2>
     </div>
     <form method="get" class="form">
-      <label>
-        ステータス
-        <input type="text" name="status" value="{{ filters.status }}" placeholder="INV/READY..." />
-      </label>
-      <label>
-        資産No
-        <input type="text" name="asset_tag" value="{{ filters.asset_tag }}" />
-      </label>
-      <label>
-        場所
-        <input type="text" name="location" value="{{ filters.location }}" />
-      </label>
+      <div class="filter-row">
+        <label>
+          状態
+          <input type="text" name="status" value="{{ filters.status }}" placeholder="INV/READY..." />
+        </label>
+        <label>
+          資産No
+          <input type="text" name="asset_tag" value="{{ filters.asset_tag }}" />
+        </label>
+        <label>
+          場所
+          <input type="text" name="location" value="{{ filters.location }}" />
+        </label>
+      </div>
       <div class="form-actions">
         <button type="submit" class="button">検索</button>
       </div>
@@ -37,7 +39,7 @@
     {% if filters.status or filters.asset_tag or filters.location %}
       <div class="filter-summary">
         フィルタ:
-        {% if filters.status %}ステータス={{ filters.status }}{% endif %}
+        {% if filters.status %}状態={{ filters.status }}{% endif %}
         {% if filters.asset_tag %} 資産No={{ filters.asset_tag }}{% endif %}
         {% if filters.location %} 場所={{ filters.location }}{% endif %}
       </div>
