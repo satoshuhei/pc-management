@@ -19,16 +19,16 @@
     <form method="get" class="form">
       <div class="filter-row">
         <button type="submit" class="button">検索</button>
-        <label>
-          状態
+        <label class="filter-field">
+          <span>状態</span>
           <input type="text" name="status" value="{{ filters.status }}" placeholder="INV/READY..." />
         </label>
-        <label>
-          資産No
+        <label class="filter-field">
+          <span>資産No</span>
           <input type="text" name="asset_tag" value="{{ filters.asset_tag }}" />
         </label>
-        <label>
-          場所
+        <label class="filter-field">
+          <span>場所</span>
           <input type="text" name="location" value="{{ filters.location }}" />
         </label>
       </div>
