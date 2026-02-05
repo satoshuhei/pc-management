@@ -65,7 +65,7 @@ input, select, textarea { border: 1px solid #ccd3de; border-radius: 6px; padding
 .badge { display: inline-flex; align-items: center; padding: 2px 6px; border-radius: 999px; font-size: 11px; margin-right: 4px; }
 .badge-overdue { background: #ffecec; color: #8a1f1f; }
 .badge-today { background: #e6ffed; color: #256029; }
-.row-actions { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
+.row-actions { display: flex; flex-direction: row; gap: 8px; align-items: center; flex-wrap: wrap; }
 .button.secondary { background: #5f6b7a; }
 .action-details summary { cursor: pointer; font-size: 12px; color: #2f80ed; }
 .action-details[open] summary { margin-bottom: 4px; }
