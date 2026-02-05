@@ -11,59 +11,44 @@
 </div>
 
 <div class="assets-layout">
-  <aside class="sidebar">
-    <section class="filter-panel panel">
-      <div class="filter-header">
-        <h2>フィルタ</h2>
-      </div>
-      <form method="get" class="form">
-        <div class="filter-row">
-          <button type="submit" class="button">検索</button>
-          <label class="filter-field">
-            <span>状態</span>
-            <input type="text" name="status" value="{{ filters.status }}" placeholder="INV/READY..." />
-          </label>
-          <label class="filter-field">
-            <span>資産番号/シリアル</span>
-            <input type="text" name="asset_keyword" value="{{ filters.asset_keyword }}" />
-          </label>
-          <label class="filter-field">
-            <span>利用者</span>
-            <input type="text" name="current_user" value="{{ filters.current_user }}" />
-          </label>
-          <label class="filter-field">
-            <span>拠点</span>
-            <input type="text" name="location" value="{{ filters.location }}" />
-          </label>
-          <label class="filter-field">
-            <span>予定担当</span>
-            <input type="text" name="planned_owner" value="{{ filters.planned_owner }}" />
-          </label>
-          <label class="filter-check">
-            <input type="checkbox" name="overdue_only" value="true" {% if filters.overdue_only %}checked{% endif %} />
-            期限超過のみ
-          </label>
-          <label class="filter-check">
-            <input type="checkbox" name="today_only" value="true" {% if filters.today_only %}checked{% endif %} />
-            今日の予定のみ
-          </label>
-        </div>
-      </form>
-    </section>
-
-    <section class="import-panel panel">
-      <h3>インポート <span class="note">（未実装）</span></h3>
-      <form method="post" action="/assets/import" class="form" enctype="multipart/form-data">
-        <label>
-          インポート（CSV）
-          <input type="file" name="file" accept=".csv" />
+  <section class="filter-panel panel">
+    <div class="filter-header">
+      <h2>フィルタ</h2>
+    </div>
+    <form method="get" class="form">
+      <div class="filter-row">
+        <button type="submit" class="button">検索</button>
+        <label class="filter-field">
+          <span>状態</span>
+          <input type="text" name="status" value="{{ filters.status }}" placeholder="INV/READY..." />
         </label>
-        <div class="form-actions">
-          <button type="submit" class="button">インポート</button>
-        </div>
-      </form>
-    </section>
-  </aside>
+        <label class="filter-field">
+          <span>資産番号/シリアル</span>
+          <input type="text" name="asset_keyword" value="{{ filters.asset_keyword }}" />
+        </label>
+        <label class="filter-field">
+          <span>利用者</span>
+          <input type="text" name="current_user" value="{{ filters.current_user }}" />
+        </label>
+        <label class="filter-field">
+          <span>拠点</span>
+          <input type="text" name="location" value="{{ filters.location }}" />
+        </label>
+        <label class="filter-field">
+          <span>予定担当</span>
+          <input type="text" name="planned_owner" value="{{ filters.planned_owner }}" />
+        </label>
+        <label class="filter-check">
+          <input type="checkbox" name="overdue_only" value="true" {% if filters.overdue_only %}checked{% endif %} />
+          期限超過のみ
+        </label>
+        <label class="filter-check">
+          <input type="checkbox" name="today_only" value="true" {% if filters.today_only %}checked{% endif %} />
+          今日の予定のみ
+        </label>
+      </div>
+    </form>
+  </section>
 
   <section class="list-panel">
     <div class="list-header">
@@ -175,6 +160,19 @@
         </tbody>
       </table>
     </div>
+  </section>
+
+  <section class="import-panel panel">
+    <h3>インポート <span class="note">（未実装）</span></h3>
+    <form method="post" action="/assets/import" class="form" enctype="multipart/form-data">
+      <label>
+        インポート（CSV）
+        <input type="file" name="file" accept=".csv" />
+      </label>
+      <div class="form-actions">
+        <button type="submit" class="button">インポート</button>
+      </div>
+    </form>
   </section>
 </div>
 {% endblock %}

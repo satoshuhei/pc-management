@@ -32,8 +32,7 @@ tr:last-child td { border-bottom: none; }
 input, select, textarea { border: 1px solid #ccd3de; border-radius: 6px; padding: 6px 8px; font-size: 14px; }
 .dashboard-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
 .dashboard-grid .panel { max-width: none; }
-.assets-layout { display: grid; grid-template-columns: 280px minmax(0, 1fr); gap: 16px; align-items: start; }
-.sidebar { display: flex; flex-direction: column; gap: 12px; }
+.assets-layout { display: flex; flex-direction: column; gap: 16px; }
 .filter-panel { max-width: none; }
 .filter-header h2 { margin: 0 0 8px; }
 .filter-row { display: grid; grid-template-columns: auto repeat(2, minmax(0, 1fr)); column-gap: 8px; row-gap: 8px; align-items: end; justify-content: start; }
