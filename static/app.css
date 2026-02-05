@@ -44,7 +44,7 @@ input, select, textarea { border: 1px solid #ccd3de; border-radius: 6px; padding
 .filter-field span { white-space: nowrap; }
 .filter-check { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #5f6b7a; }
 .filter-check input { margin: 0; }
-.compact-table th, .compact-table td { padding: 6px 10px; }
+.compact-table th, .compact-table td { padding: 4px 8px; }
 .compact-table { border-collapse: separate; border-spacing: 0; table-layout: fixed; }
 .panel-section { margin-top: 16px; padding-top: 12px; border-top: 1px solid #e6e9ef; }
 .import-panel { padding: 10px 12px; max-width: 520px; }
@@ -65,7 +65,8 @@ input, select, textarea { border: 1px solid #ccd3de; border-radius: 6px; padding
 .badge { display: inline-flex; align-items: center; padding: 2px 6px; border-radius: 999px; font-size: 11px; margin-right: 4px; }
 .badge-overdue { background: #ffecec; color: #8a1f1f; }
 .badge-today { background: #e6ffed; color: #256029; }
-.row-actions { display: flex; flex-direction: row; gap: 8px; align-items: center; flex-wrap: wrap; }
+.row-actions { display: flex; flex-direction: row; gap: 6px; align-items: center; flex-wrap: wrap; }
+.row-actions .button { padding: 4px 8px; font-size: 12px; }
 .button.secondary { background: #5f6b7a; }
 .action-details summary { cursor: pointer; font-size: 12px; color: #2f80ed; }
 .action-details[open] summary { margin-bottom: 4px; }
