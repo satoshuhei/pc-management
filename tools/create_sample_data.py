@@ -35,9 +35,20 @@ def create_sample_assets(session, count_per_status=10):
     assets = []
     for status in ASSET_STATUSES:
         for i in range(count_per_status):
+            asset_tag = f"AST-{status.value}-{i:02}"
+            serial_no = f"SN-{status.value}-{i:04}"
+            exists = (
+                session.query(PcAsset)
+                .filter(
+                    (PcAsset.asset_tag == asset_tag) | (PcAsset.serial_no == serial_no)
+                )
+                .first()
+            )
+            if exists:
+                continue
             asset = PcAsset(
-                asset_tag=f"AST-{status.value}-{i:02}",
-                serial_no=f"SN-{status.value}-{i:04}",
+                asset_tag=asset_tag,
+                serial_no=serial_no,
                 hostname=f"host-{status.value.lower()}-{i:02}",
                 status=status,
                 current_user=None,
@@ -47,11 +58,15 @@ def create_sample_assets(session, count_per_status=10):
             session.add(asset)
             assets.append(asset)
     session.commit()
-    return assets
+    if assets:
+        return assets
+    return session.query(PcAsset).all()
 
 
 def create_sample_requests(session, assets, count_per_status=10):
     requests = []
+    if not assets:
+        return requests
     for status in REQUEST_STATUSES:
         for i in range(count_per_status):
             asset = random.choice(assets)
@@ -69,6 +84,8 @@ def create_sample_requests(session, assets, count_per_status=10):
 
 def create_sample_plans(session, assets, count_per_status=10):
     plans = []
+    if not assets:
+        return plans
     for status in PLAN_STATUSES:
         for i in range(count_per_status):
             asset = random.choice(assets)

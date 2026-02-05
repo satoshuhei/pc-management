@@ -133,6 +133,7 @@ def test_assets_list_renders_data():
     res = client.get("/assets", follow_redirects=True)
     assert res.status_code == 200
     assert "AST-TEST-01" in res.text
+    assert "期限超過テスト" in res.text
     app.dependency_overrides.clear()
 
 
@@ -191,7 +192,9 @@ def test_assets_layout_redmine_style():
     assert "filter-panel" in res.text
     assert "フィルタ" in res.text
     assert "状態" in res.text
-    assert "資産No" in res.text
+    assert "資産番号/シリアル" in res.text
+    assert "利用者" in res.text
+    assert "予定担当" in res.text
     assert "filter-field" in res.text
     assert "チケット一覧" not in res.text
     assert res.text.count("件数:") == 1
@@ -199,6 +202,9 @@ def test_assets_layout_redmine_style():
     assert "list-scroll" in res.text
     assert "compact-table" in res.text
     assert "table-header" in res.text
-    assert res.text.index("検索") < res.text.index("状態")
-    assert res.text.index("list-scroll") < res.text.index("インポート")
+    assert "次の予定" in res.text
+    assert "予定状況" in res.text
+    assert "予定を追加" in res.text
+    assert "次予定を完了" in res.text
+    assert "期限超過あり" in res.text
     app.dependency_overrides.clear()

@@ -18,10 +18,87 @@
     <tr><th>資産タグ</th><td>{{ asset.asset_tag }}</td></tr>
     <tr><th>シリアル</th><td>{{ asset.serial_no or "" }}</td></tr>
     <tr><th>ホスト名</th><td>{{ asset.hostname or "" }}</td></tr>
-    <tr><th>状態</th><td>{{ asset.status }}</td></tr>
+    <tr><th>状態</th><td>{{ status_labels.get(asset.status, asset.status) }}</td></tr>
     <tr><th>利用者</th><td>{{ asset.current_user or "" }}</td></tr>
     <tr><th>場所</th><td>{{ asset.location or "" }}</td></tr>
     <tr><th>メモ</th><td>{{ asset.notes or "" }}</td></tr>
+  </tbody>
+</table>
+
+<h2>状態更新</h2>
+<form method="post" action="/assets/{{ asset.id }}/transition" class="form">
+  <label>
+    遷移先
+    <select name="to_status" required>
+      {% for target in targets %}
+        <option value="{{ target }}">{{ status_labels.get(target, target) }}</option>
+      {% endfor %}
+    </select>
+  </label>
+  <label>
+    理由
+    <input type="text" name="reason" placeholder="理由" />
+  </label>
+  <button type="submit" class="button">更新</button>
+</form>
+
+<h2>予定一覧</h2>
+<form method="post" action="/assets/{{ asset.id }}/plans" class="form">
+  <label>
+    タイトル
+    <input type="text" name="title" required />
+  </label>
+  <label>
+    予定日
+    <input type="date" name="planned_date" required />
+  </label>
+  <label>
+    予定担当
+    <input type="text" name="planned_owner" />
+  </label>
+  <button type="submit" class="button">予定を追加</button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <th>状態</th>
+      <th>予定日</th>
+      <th>タイトル</th>
+      <th>予定担当</th>
+      <th>実績日</th>
+      <th>実施者</th>
+      <th>実績メモ</th>
+      <th>操作</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for plan in plans %}
+      <tr>
+        <td>{{ plan_status_labels.get(plan.plan_status, plan.plan_status) }}</td>
+        <td>{{ plan.planned_date or "" }}</td>
+        <td>{{ plan.title }}</td>
+        <td>{{ plan.planned_owner or "" }}</td>
+        <td>{{ plan.actual_date or "" }}</td>
+        <td>{{ plan.actual_owner or "" }}</td>
+        <td>{{ plan.result_note or "" }}</td>
+        <td>
+          <a class="button" href="/plans/{{ plan.id }}/edit">編集</a>
+          {% if plan.plan_status == "PLANNED" %}
+            <form method="post" action="/assets/{{ asset.id }}/plans/{{ plan.id }}/done" class="inline-form">
+              <input type="date" name="actual_date" value="{{ today }}" required />
+              <input type="text" name="result_note" placeholder="実績メモ" />
+              <button type="submit" class="button">完了</button>
+            </form>
+            <form method="post" action="/assets/{{ asset.id }}/plans/{{ plan.id }}/cancel" class="inline-form" onsubmit="return confirm('中止しますか？');">
+              <button type="submit" class="button danger">中止</button>
+            </form>
+          {% endif %}
+        </td>
+      </tr>
+    {% else %}
+      <tr><td colspan="8">予定がありません。</td></tr>
+    {% endfor %}
   </tbody>
 </table>
 
@@ -34,8 +111,8 @@
     {% for row in history %}
       <tr>
         <td>{{ row.changed_at | format_jst }}</td>
-        <td>{{ row.from_status or "" }}</td>
-        <td>{{ row.to_status }}</td>
+        <td>{{ status_labels.get(row.from_status, row.from_status) if row.from_status else "" }}</td>
+        <td>{{ status_labels.get(row.to_status, row.to_status) }}</td>
         <td>{{ row.changed_by }}</td>
         <td>{{ row.reason or "" }}</td>
       </tr>

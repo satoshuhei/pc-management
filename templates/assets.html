@@ -11,107 +11,170 @@
 </div>
 
 <div class="assets-layout">
-  <section class="filter-panel panel">
-    <div class="filter-header">
-      <h2>フィルタ</h2>
-    </div>
-    <form method="get" class="form">
-      <div class="filter-row">
-        <button type="submit" class="button">検索</button>
-        <label class="filter-field">
-          <span>状態</span>
-          <input type="text" name="status" value="{{ filters.status }}" placeholder="INV/READY..." />
-        </label>
-        <label class="filter-field">
-          <span>資産No</span>
-          <input type="text" name="asset_tag" value="{{ filters.asset_tag }}" />
-        </label>
-        <label class="filter-field">
-          <span>場所</span>
-          <input type="text" name="location" value="{{ filters.location }}" />
-        </label>
+  <aside class="sidebar">
+    <section class="filter-panel panel">
+      <div class="filter-header">
+        <h2>フィルタ</h2>
       </div>
-    </form>
+      <form method="get" class="form">
+        <div class="filter-row">
+          <button type="submit" class="button">検索</button>
+          <label class="filter-field">
+            <span>状態</span>
+            <input type="text" name="status" value="{{ filters.status }}" placeholder="INV/READY..." />
+          </label>
+          <label class="filter-field">
+            <span>資産番号/シリアル</span>
+            <input type="text" name="asset_keyword" value="{{ filters.asset_keyword }}" />
+          </label>
+          <label class="filter-field">
+            <span>利用者</span>
+            <input type="text" name="current_user" value="{{ filters.current_user }}" />
+          </label>
+          <label class="filter-field">
+            <span>拠点</span>
+            <input type="text" name="location" value="{{ filters.location }}" />
+          </label>
+          <label class="filter-field">
+            <span>予定担当</span>
+            <input type="text" name="planned_owner" value="{{ filters.planned_owner }}" />
+          </label>
+          <label class="filter-check">
+            <input type="checkbox" name="overdue_only" value="true" {% if filters.overdue_only %}checked{% endif %} />
+            期限超過のみ
+          </label>
+          <label class="filter-check">
+            <input type="checkbox" name="today_only" value="true" {% if filters.today_only %}checked{% endif %} />
+            今日の予定のみ
+          </label>
+        </div>
+      </form>
+    </section>
 
-    {% if filters.status or filters.asset_tag or filters.location %}
-      <div class="filter-summary">
-        フィルタ:
-        {% if filters.status %}状態={{ filters.status }}{% endif %}
-        {% if filters.asset_tag %} 資産No={{ filters.asset_tag }}{% endif %}
-        {% if filters.location %} 場所={{ filters.location }}{% endif %}
-      </div>
-    {% endif %}
-
-  </section>
+    <section class="import-panel panel">
+      <h3>インポート <span class="note">（未実装）</span></h3>
+      <form method="post" action="/assets/import" class="form" enctype="multipart/form-data">
+        <label>
+          インポート（CSV）
+          <input type="file" name="file" accept=".csv" />
+        </label>
+        <div class="form-actions">
+          <button type="submit" class="button">インポート</button>
+        </div>
+      </form>
+    </section>
+  </aside>
 
   <section class="list-panel">
     <div class="list-header">
-      <span class="summary">件数: {{ assets | length }}</span>
+      <div class="summary-block">
+        <span class="summary">件数: {{ assets | length }}</span>
+        {% if filter_summary %}
+          <span class="filter-summary">検索条件: {{ filter_summary | join('、') }}</span>
+        {% endif %}
+      </div>
     </div>
     <div class="table-header">
       <table class="compact-table">
         <colgroup>
-          <col style="width:6%;" />
-          <col style="width:18%;" />
-          <col style="width:10%;" />
+          <col style="width:12%;" />
+          <col style="width:12%;" />
+          <col style="width:12%;" />
           <col style="width:12%;" />
           <col style="width:10%;" />
-          <col style="width:44%;" />
+          <col style="width:20%;" />
+          <col style="width:8%;" />
+          <col style="width:14%;" />
         </colgroup>
         <thead>
-          <tr><th>ID</th><th>資産No</th><th>状態</th><th>利用者</th><th>場所</th><th>状態更新</th></tr>
+          <tr>
+            <th>資産番号</th>
+            <th>ホスト名</th>
+            <th>状態</th>
+            <th>利用者</th>
+            <th>拠点</th>
+            <th>次の予定</th>
+            <th>予定状況</th>
+            <th>操作</th>
+          </tr>
         </thead>
       </table>
     </div>
     <div class="list-scroll">
       <table class="compact-table">
         <colgroup>
-          <col style="width:6%;" />
-          <col style="width:18%;" />
-          <col style="width:10%;" />
+          <col style="width:12%;" />
+          <col style="width:12%;" />
+          <col style="width:12%;" />
           <col style="width:12%;" />
           <col style="width:10%;" />
-          <col style="width:44%;" />
+          <col style="width:20%;" />
+          <col style="width:8%;" />
+          <col style="width:14%;" />
         </colgroup>
         <tbody>
           {% for asset in assets %}
+            {% set next_plan = next_plans.get(asset.id) %}
             <tr>
-              <td><a href="/assets/{{ asset.id }}">{{ asset.id }}</a></td>
-              <td>{{ asset.asset_tag }}</td>
-              <td>{{ status_labels.get(asset.status, asset.status) }}</td>
+              <td><a href="/assets/{{ asset.id }}">{{ asset.asset_tag }}</a></td>
+              <td>{{ asset.hostname or "" }}</td>
+              <td>
+                {{ status_labels.get(asset.status, asset.status) }}
+                <span class="status-code">({{ asset.status }})</span>
+              </td>
               <td>{{ asset.current_user or "" }}</td>
               <td>{{ asset.location or "" }}</td>
               <td>
-                <form method="post" action="/assets/{{ asset.id }}/transition">
-                  <select name="to_status" required>
-                    {% for target in targets[asset.id] %}
-                      <option value="{{ target }}">{{ status_labels.get(target, target) }}</option>
-                    {% endfor %}
-                  </select>
-                  <input type="text" name="reason" placeholder="理由" />
-                  <button type="submit" class="button">更新</button>
-                </form>
+                {% if next_plan %}
+                  <div class="next-plan-date">{{ next_plan.planned_date }}</div>
+                  <div class="next-plan-title">{{ next_plan.title }}</div>
+                  <div class="next-plan-owner">{{ next_plan.planned_owner or "" }}</div>
+                {% else %}
+                  <span class="muted">予定なし</span>
+                {% endif %}
+              </td>
+              <td>
+                {% if overdue_flags.get(asset.id) %}
+                  <span class="badge badge-overdue">期限超過あり</span>
+                {% endif %}
+                {% if today_flags.get(asset.id) %}
+                  <span class="badge badge-today">今日の予定あり</span>
+                {% endif %}
+                {% if not overdue_flags.get(asset.id) and not today_flags.get(asset.id) %}
+                  <span class="muted">-</span>
+                {% endif %}
+              </td>
+              <td>
+                <div class="row-actions">
+                  <a class="button secondary" href="/assets/{{ asset.id }}">詳細を見る</a>
+                  <details class="action-details">
+                    <summary>予定を追加</summary>
+                    <form method="post" action="/assets/{{ asset.id }}/plans" class="inline-form">
+                      <input type="text" name="title" placeholder="予定タイトル" required />
+                      <input type="date" name="planned_date" required />
+                      <input type="text" name="planned_owner" placeholder="担当" />
+                      <button type="submit" class="button">保存</button>
+                    </form>
+                  </details>
+                  {% if next_plan %}
+                    <details class="action-details">
+                      <summary>次予定を完了</summary>
+                      <form method="post" action="/assets/{{ asset.id }}/plans/{{ next_plan.id }}/done" class="inline-form">
+                        <input type="date" name="actual_date" value="{{ today }}" required />
+                        <input type="text" name="result_note" placeholder="実績メモ" />
+                        <button type="submit" class="button">完了</button>
+                      </form>
+                    </details>
+                  {% endif %}
+                </div>
               </td>
             </tr>
           {% else %}
-            <tr><td colspan="6">データがありません。</td></tr>
+            <tr><td colspan="8">データがありません。</td></tr>
           {% endfor %}
         </tbody>
       </table>
     </div>
-  </section>
-
-  <section class="import-panel panel">
-    <h3>インポート <span class="note">（未実装）</span></h3>
-    <form method="post" action="/assets/import" class="form" enctype="multipart/form-data">
-      <label>
-        インポート（CSV）
-        <input type="file" name="file" accept=".csv" />
-      </label>
-      <div class="form-actions">
-        <button type="submit" class="button">インポート</button>
-      </div>
-    </form>
   </section>
 </div>
 {% endblock %}
