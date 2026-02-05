@@ -49,11 +49,31 @@
     <div class="list-header">
       <span class="summary">件数: {{ assets | length }}</span>
     </div>
-    <div class="list-scroll">
+    <div class="table-header">
       <table class="compact-table">
-        <thead class="sticky-header">
+        <colgroup>
+          <col style="width:6%;" />
+          <col style="width:18%;" />
+          <col style="width:10%;" />
+          <col style="width:12%;" />
+          <col style="width:10%;" />
+          <col style="width:44%;" />
+        </colgroup>
+        <thead>
           <tr><th>ID</th><th>資産No</th><th>状態</th><th>利用者</th><th>場所</th><th>状態更新</th></tr>
         </thead>
+      </table>
+    </div>
+    <div class="list-scroll">
+      <table class="compact-table">
+        <colgroup>
+          <col style="width:6%;" />
+          <col style="width:18%;" />
+          <col style="width:10%;" />
+          <col style="width:12%;" />
+          <col style="width:10%;" />
+          <col style="width:44%;" />
+        </colgroup>
         <tbody>
           {% for asset in assets %}
             <tr>
