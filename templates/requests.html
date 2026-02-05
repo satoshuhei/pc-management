@@ -36,7 +36,7 @@
     {% for req in requests %}
       <tr>
         <td><a href="/requests/{{ req.id }}">{{ req.id }}</a></td>
-        <td>{{ req.status }}</td>
+        <td>{{ status_labels.get(req.status, req.status) }}</td>
         <td>{{ req.requester or "" }}</td>
         <td>{{ req.asset_id or "" }}</td>
         <td>

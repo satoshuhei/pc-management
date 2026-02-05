@@ -1,0 +1,68 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam activity {
+  StartColor #2D6A4F
+  EndColor #2D6A4F
+  BarColor #1B4332
+  BorderColor #1B4332
+  ArrowColor #1B4332
+}
+
+start
+:Login (/login);
+if (Authenticated?) then (yes)
+  :Dashboard (/dashboard);
+else (no)
+  :Login Error (flash);
+  :Login (/login);
+endif
+
+:Dashboard (/dashboard);
+
+fork
+  :Assets List (/assets);
+  fork
+    :Asset New (/assets/new);
+    :Asset Create (POST /assets);
+    :Asset Detail (/assets/{id});
+    :Asset Edit (/assets/{id}/edit);
+    :Asset Update (POST /assets/{id}/edit);
+    :Asset Delete (POST /assets/{id}/delete);
+    :Asset Transition (POST /assets/{id}/transition);
+    :Asset Plan Add (POST /assets/{id}/plans);
+    :Asset Plan Done (POST /assets/{id}/plans/{plan_id}/done);
+    :Asset Plan Cancel (POST /assets/{id}/plans/{plan_id}/cancel);
+  end fork
+  :Assets List (/assets);
+
+fork again
+  :Requests List (/requests);
+  fork
+    :Request New (/requests/new);
+    :Request Create (POST /requests);
+    :Request Detail (/requests/{id});
+    :Request Edit (/requests/{id}/edit);
+    :Request Update (POST /requests/{id}/edit);
+    :Request Delete (POST /requests/{id}/delete);
+    :Request Transition (POST /requests/{id}/transition);
+  end fork
+  :Requests List (/requests);
+
+fork again
+  :Overdue Plans (/plans/overdue);
+  fork
+    :Plan New (/plans/new);
+    :Plan Create (POST /plans);
+    :Plan Detail (/plans/{id});
+    :Plan Edit (/plans/{id}/edit);
+    :Plan Update (POST /plans/{id}/edit);
+    :Plan Delete (POST /plans/{id}/delete);
+    :Plan Done (POST /plans/{id}/done);
+  end fork
+  :Overdue Plans (/plans/overdue);
+end fork
+
+:Logout (POST /logout);
+stop
+@enduml

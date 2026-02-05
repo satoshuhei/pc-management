@@ -1,0 +1,83 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam linetype ortho
+
+entity "users" as users {
+  * id : int
+  --
+  user_id : varchar(64)
+  passcode_hash : varchar(255)
+  display_name : varchar(128)
+  role : enum(ADMIN, USER)
+  is_active : boolean
+  created_at : datetime
+  updated_at : datetime
+}
+
+entity "pc_assets" as pc_assets {
+  * id : int
+  --
+  asset_tag : varchar(50)
+  serial_no : varchar(128)
+  hostname : varchar(63)
+  status : enum(INV, READY, USE, RET, IT, DIS, AUD, LOST)
+  current_user : varchar(128)
+  location : varchar(128)
+  request_id : int
+  notes : text
+  created_at : datetime
+  updated_at : datetime
+}
+
+entity "pc_requests" as pc_requests {
+  * id : int
+  --
+  status : enum(RQ, OP, RP)
+  requester : varchar(128)
+  note : text
+  asset_id : int
+  created_at : datetime
+  updated_at : datetime
+}
+
+entity "pc_plans" as pc_plans {
+  * id : int
+  --
+  entity_type : varchar(16)
+  entity_id : int
+  title : varchar(255)
+  planned_date : date
+  planned_owner : varchar(128)
+  plan_status : enum(PLANNED, DONE, CANCELLED)
+  actual_date : date
+  actual_owner : varchar(128)
+  result_note : text
+  created_by : varchar(64)
+  created_at : datetime
+  updated_at : datetime
+}
+
+entity "pc_status_history" as pc_status_history {
+  * id : int
+  --
+  entity_type : varchar(16)
+  entity_id : int
+  from_status : varchar(16)
+  to_status : varchar(16)
+  changed_by : varchar(64)
+  reason : varchar(1000)
+  ticket_no : varchar(64)
+  changed_at : datetime
+}
+
+pc_assets::request_id }o--|| pc_requests::id : fk
+pc_requests::asset_id }o--|| pc_assets::id : fk
+
+pc_plans::entity_id }o--|| pc_assets::id : when entity_type=ASSET
+pc_plans::entity_id }o--|| pc_requests::id : when entity_type=REQUEST
+
+pc_status_history::entity_id }o--|| pc_assets::id : when entity_type=ASSET
+pc_status_history::entity_id }o--|| pc_requests::id : when entity_type=REQUEST
+
+@enduml

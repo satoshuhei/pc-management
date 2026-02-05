@@ -35,6 +35,30 @@ class PlanStatus(str, enum.Enum):
     CANCELLED = "CANCELLED"
 
 
+ASSET_STATUS_LABELS: dict[str, str] = {
+    AssetStatus.INV.value: "未利用在庫",
+    AssetStatus.READY.value: "利用準備完了",
+    AssetStatus.USE.value: "利用中",
+    AssetStatus.RET.value: "回収済",
+    AssetStatus.IT.value: "IT部引渡済",
+    AssetStatus.DIS.value: "廃棄済",
+    AssetStatus.AUD.value: "棚卸差異",
+    AssetStatus.LOST.value: "所在不明",
+}
+
+REQUEST_STATUS_LABELS: dict[str, str] = {
+    RequestStatus.RQ.value: "要望受付",
+    RequestStatus.OP.value: "手配予定",
+    RequestStatus.RP.value: "準備予定",
+}
+
+PLAN_STATUS_LABELS: dict[str, str] = {
+    PlanStatus.PLANNED.value: "予定",
+    PlanStatus.DONE.value: "完了",
+    PlanStatus.CANCELLED.value: "中止",
+}
+
+
 class User(Base):
     __tablename__ = "users"
 

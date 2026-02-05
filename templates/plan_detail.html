@@ -20,7 +20,7 @@
     <tr><th>タイトル</th><td>{{ plan.title }}</td></tr>
     <tr><th>予定日</th><td>{{ plan.planned_date }}</td></tr>
     <tr><th>担当予定者</th><td>{{ plan.planned_owner or "" }}</td></tr>
-    <tr><th>状態</th><td>{{ plan.plan_status }}</td></tr>
+    <tr><th>状態</th><td>{{ status_labels.get(plan.plan_status, plan.plan_status) }}</td></tr>
     <tr><th>実績日</th><td>{{ plan.actual_date or "" }}</td></tr>
     <tr><th>実施者</th><td>{{ plan.actual_owner or "" }}</td></tr>
     <tr><th>実績メモ</th><td>{{ plan.result_note or "" }}</td></tr>

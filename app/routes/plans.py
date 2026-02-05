@@ -6,7 +6,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.exc import IntegrityError
 
 from app.db import get_db
-from app.models import PcPlan, PlanStatus
+from app.models import PLAN_STATUS_LABELS, PcPlan, PlanStatus
 from app.plan_rules import PlanValidationError, validate_plan_integrity
 from app.utils import add_flash, consume_flash
 
@@ -103,6 +103,7 @@ async def plans_overdue(
         {
             "flashes": flashes,
             **context,
+            "status_labels": PLAN_STATUS_LABELS,
         },
     )
 
@@ -339,6 +340,7 @@ async def plan_detail(request: Request, plan_id: int, db: Session = Depends(get_
         {
             "flashes": flashes,
             "plan": plan,
+            "status_labels": PLAN_STATUS_LABELS,
         },
     )
 

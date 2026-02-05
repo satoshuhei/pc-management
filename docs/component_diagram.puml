@@ -1,0 +1,31 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam componentStyle rectangle
+
+actor "User" as user
+
+rectangle "PC Management System" as system {
+  [FastAPI App] as app
+  [Jinja2 Templates] as templates
+  [Static Assets] as static
+  [SQLAlchemy ORM] as orm
+  [Validation Rules] as validation
+  [Transition Service] as transition
+  [Plan Rules] as plan_rules
+  [Logging] as logging
+}
+
+database "DB (MySQL/SQLite)" as db
+
+user --> app : HTTP
+app --> templates : render
+app --> static : serve
+app --> orm : CRUD
+orm --> db : SQL
+app --> validation : input checks
+app --> transition : status transitions
+app --> plan_rules : plan integrity
+app --> logging : app logs
+
+@enduml

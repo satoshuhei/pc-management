@@ -15,7 +15,7 @@
 <table>
   <tbody>
     <tr><th>ID</th><td>{{ request_item.id }}</td></tr>
-    <tr><th>状態</th><td>{{ request_item.status }}</td></tr>
+    <tr><th>状態</th><td>{{ status_labels.get(request_item.status, request_item.status) }}</td></tr>
     <tr><th>申請者</th><td>{{ request_item.requester or "" }}</td></tr>
     <tr><th>メモ</th><td>{{ request_item.note or "" }}</td></tr>
     <tr><th>資産ID</th><td>{{ request_item.asset_id or "" }}</td></tr>
@@ -31,8 +31,8 @@
     {% for row in history %}
       <tr>
         <td>{{ row.changed_at | format_jst }}</td>
-        <td>{{ row.from_status or "" }}</td>
-        <td>{{ row.to_status }}</td>
+        <td>{{ status_labels.get(row.from_status, row.from_status) if row.from_status else "" }}</td>
+        <td>{{ status_labels.get(row.to_status, row.to_status) }}</td>
         <td>{{ row.changed_by }}</td>
         <td>{{ row.reason or "" }}</td>
       </tr>

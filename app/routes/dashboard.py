@@ -8,7 +8,17 @@ from sqlalchemy import func
 from sqlalchemy.orm import Session
 
 from app.db import get_db
-from app.models import AssetStatus, PcAsset, PcPlan, PcRequest, PlanStatus, RequestStatus
+from app.models import (
+    ASSET_STATUS_LABELS,
+    PLAN_STATUS_LABELS,
+    REQUEST_STATUS_LABELS,
+    AssetStatus,
+    PcAsset,
+    PcPlan,
+    PcRequest,
+    PlanStatus,
+    RequestStatus,
+)
 from app.utils import consume_flash
 
 router = APIRouter()
@@ -41,17 +51,17 @@ async def dashboard(request: Request, db: Session = Depends(get_db)) -> Any:
         .scalar()
     )
 
-    asset_summary = {status.value: 0 for status in AssetStatus}
+    asset_summary = {ASSET_STATUS_LABELS[status.value]: 0 for status in AssetStatus}
     for status, count in asset_counts:
-        asset_summary[status.value] = count
+        asset_summary[ASSET_STATUS_LABELS[status.value]] = count
 
-    request_summary = {status.value: 0 for status in RequestStatus}
+    request_summary = {REQUEST_STATUS_LABELS[status.value]: 0 for status in RequestStatus}
     for status, count in request_counts:
-        request_summary[status.value] = count
+        request_summary[REQUEST_STATUS_LABELS[status.value]] = count
 
-    plan_summary = {status.value: 0 for status in PlanStatus}
+    plan_summary = {PLAN_STATUS_LABELS[status.value]: 0 for status in PlanStatus}
     for status, count in plan_counts:
-        plan_summary[status.value] = count
+        plan_summary[PLAN_STATUS_LABELS[status.value]] = count
 
     return request.app.state.templates.TemplateResponse(
         request,

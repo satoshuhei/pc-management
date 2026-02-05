@@ -1,0 +1,35 @@
+@startuml
+skinparam backgroundColor #FFFFFF
+skinparam shadowing false
+skinparam linetype ortho
+
+actor "User" as user
+rectangle "PC Management System" as system
+
+database "users" as users
+
+database "pc_assets" as assets
+
+database "pc_requests" as requests
+
+database "pc_plans" as plans
+
+database "pc_status_history" as history
+
+user --> system : Login/CRUD/Transitions
+system --> user : HTML (Jinja2)
+
+system --> users : Authenticate
+users --> system : User/Role
+
+system --> assets : Read/Write Assets
+system --> requests : Read/Write Requests
+system --> plans : Read/Write Plans
+system --> history : Write Status History
+
+system --> history : Read History
+system --> plans : Read Plans
+system --> assets : Read Assets
+system --> requests : Read Requests
+
+@enduml
