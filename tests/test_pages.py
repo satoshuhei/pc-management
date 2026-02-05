@@ -186,6 +186,7 @@ def test_assets_layout_redmine_style():
     client = _login_client()
     res = client.get("/assets", follow_redirects=True)
     assert res.status_code == 200
+    assert "title-row" in res.text
     assert "assets-layout" in res.text
     assert "filter-panel" in res.text
     assert "フィルタ" in res.text

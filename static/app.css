@@ -7,6 +7,8 @@ body { font-family: "Segoe UI", sans-serif; margin: 0; background: #f6f7fb; }
 .user { margin-right: 12px; }
 .content { padding: 16px; }
 .page-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; margin-bottom: 12px; }
+.title-row { display: flex; align-items: baseline; gap: 8px; }
+.title-note { font-size: 12px; color: #5f6b7a; }
 .actions { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
 .summary { color: #5f6b7a; font-size: 13px; margin: 4px 0 0; }
 .filter-summary { margin: 8px 0 16px; font-size: 13px; color: #5f6b7a; }
