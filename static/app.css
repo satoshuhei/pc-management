@@ -55,10 +55,10 @@ input, select, textarea { border: 1px solid #ccd3de; border-radius: 6px; padding
 .list-header .summary-block { display: flex; flex-direction: column; gap: 4px; }
 .list-header .filter-summary { margin: 0; }
 .status-code { font-size: 11px; color: #5f6b7a; margin-left: 4px; }
-.next-plan-date { font-weight: 600; font-size: 12px; }
-.next-plan-title { font-size: 12px; }
-.next-plan-owner { font-size: 11px; color: #5f6b7a; }
-.next-plan-row { display: flex; flex-direction: column; gap: 2px; margin-bottom: 6px; }
+.next-plan-date { font-weight: 600; font-size: 12px; min-width: 86px; }
+.next-plan-title { font-size: 12px; flex: 1; }
+.next-plan-owner { font-size: 11px; color: #5f6b7a; min-width: 80px; }
+.next-plan-row { display: flex; align-items: center; gap: 8px; margin-bottom: 4px; }
 .next-plan-row:last-child { margin-bottom: 0; }
 .muted { color: #9aa3af; font-size: 12px; }
 .badge { display: inline-flex; align-items: center; padding: 2px 6px; border-radius: 999px; font-size: 11px; margin-right: 4px; }
