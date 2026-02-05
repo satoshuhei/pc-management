@@ -239,7 +239,7 @@ async def assets(
 ):
     safe_limit = max(1, min(3, next_plan_limit))
     if status or asset_keyword or location or current_user or planned_owner or overdue_only or today_only or next_plan_limit:
-        add_flash(request.session, "success", "検索条件を適用しました。")
+        add_flash(request.session, "success", "フィルタを適用しました。")
 
     flashes = consume_flash(request.session)
     context = _build_assets_context(

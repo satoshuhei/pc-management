@@ -149,7 +149,7 @@ def test_search_flash_message():
     client = _login_client()
     res = client.get("/assets?status=INV", follow_redirects=True)
     assert res.status_code == 200
-    assert "検索条件を適用しました。" in res.text
+    assert "フィルタを適用しました。" in res.text
     app.dependency_overrides.clear()
 
 
