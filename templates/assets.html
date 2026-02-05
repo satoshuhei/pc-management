@@ -38,6 +38,14 @@
           <span>予定担当</span>
           <input type="text" name="planned_owner" value="{{ filters.planned_owner }}" />
         </label>
+        <label class="filter-field">
+          <span>表示件数</span>
+          <select name="next_plan_limit">
+            <option value="1" {% if filters.next_plan_limit == 1 %}selected{% endif %}>1件</option>
+            <option value="2" {% if filters.next_plan_limit == 2 %}selected{% endif %}>2件</option>
+            <option value="3" {% if filters.next_plan_limit == 3 %}selected{% endif %}>3件</option>
+          </select>
+        </label>
         <label class="filter-check">
           <input type="checkbox" name="overdue_only" value="true" {% if filters.overdue_only %}checked{% endif %} />
           期限超過のみ

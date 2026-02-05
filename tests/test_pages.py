@@ -195,6 +195,7 @@ def test_assets_layout_redmine_style():
     assert "資産番号/シリアル" in res.text
     assert "利用者" in res.text
     assert "予定担当" in res.text
+    assert "next_plan_limit" in res.text
     assert "filter-field" in res.text
     assert "チケット一覧" not in res.text
     assert res.text.count("件数:") == 1

@@ -34,6 +34,7 @@ def _build_assets_context(
     planned_owner: str | None,
     overdue_only: bool,
     today_only: bool,
+    next_plan_limit: int,
 ):
     query = db.query(PcAsset)
     if status:
@@ -70,7 +71,7 @@ def _build_assets_context(
     today_flags: dict[int, bool] = {}
 
     for asset_id, plans in plans_by_asset.items():
-        next_plans[asset_id] = _select_next_plans(plans, limit=3)
+        next_plans[asset_id] = _select_next_plans(plans, limit=next_plan_limit)
         overdue_flags[asset_id] = _has_overdue_plan(plans, today)
         today_flags[asset_id] = _has_today_plan(plans, today)
 
@@ -100,6 +101,7 @@ def _build_assets_context(
         planned_owner=planned_owner,
         overdue_only=overdue_only,
         today_only=today_only,
+        next_plan_limit=next_plan_limit,
     )
 
     return {
@@ -116,6 +118,7 @@ def _build_assets_context(
             "planned_owner": planned_owner or "",
             "overdue_only": overdue_only,
             "today_only": today_only,
+            "next_plan_limit": next_plan_limit,
         },
         "filter_summary": filter_summary,
     }
@@ -179,6 +182,7 @@ def _build_filter_summary(
     planned_owner: str | None,
     overdue_only: bool,
     today_only: bool,
+    next_plan_limit: int,
 ) -> list[str]:
     summary: list[str] = []
     if status:
@@ -195,6 +199,7 @@ def _build_filter_summary(
         summary.append("期限超過のみ")
     if today_only:
         summary.append("今日の予定のみ")
+    summary.append(f"次予定{next_plan_limit}件")
     return summary
 
 
@@ -229,9 +234,11 @@ async def assets(
     planned_owner: str | None = None,
     overdue_only: bool = False,
     today_only: bool = False,
+    next_plan_limit: int = 1,
     db: Session = Depends(get_db),
 ):
-    if status or asset_keyword or location or current_user or planned_owner or overdue_only or today_only:
+    safe_limit = max(1, min(3, next_plan_limit))
+    if status or asset_keyword or location or current_user or planned_owner or overdue_only or today_only or next_plan_limit:
         add_flash(request.session, "success", "検索条件を適用しました。")
 
     flashes = consume_flash(request.session)
@@ -245,6 +252,7 @@ async def assets(
         planned_owner,
         overdue_only,
         today_only,
+        safe_limit,
     )
     return request.app.state.templates.TemplateResponse(
         request,
@@ -288,6 +296,7 @@ async def asset_transition(
             None,
             False,
             False,
+            1,
         )
         return request.app.state.templates.TemplateResponse(
             request,
