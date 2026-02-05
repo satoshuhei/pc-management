@@ -203,6 +203,7 @@ def test_assets_layout_redmine_style():
     assert "list-scroll" in res.text
     assert "compact-table" in res.text
     assert "table-header" in res.text
+    assert "直近1件" in res.text
     assert "次の予定" in res.text
     assert "予定状況" in res.text
     assert "予定を追加" in res.text
