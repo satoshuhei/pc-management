@@ -36,9 +36,11 @@ input, select, textarea { border: 1px solid #ccd3de; border-radius: 6px; padding
 .filter-row label { margin: 0; }
 .filter-row .button { margin-bottom: 2px; }
 .compact-table th, .compact-table td { padding: 6px 10px; }
-.sticky-header th { position: sticky; top: 0; z-index: 1; }
+.compact-table { border-collapse: separate; border-spacing: 0; }
+.sticky-header th { position: sticky; top: 0; z-index: 2; background: #f1f4f9; box-shadow: 0 1px 0 #e6e9ef; }
+.list-scroll thead th { position: sticky; top: 0; z-index: 2; background: #f1f4f9; box-shadow: 0 1px 0 #e6e9ef; }
 .panel-section { margin-top: 16px; padding-top: 12px; border-top: 1px solid #e6e9ef; }
 .list-panel { display: flex; flex-direction: column; gap: 8px; }
 .list-header { display: flex; align-items: baseline; justify-content: flex-end; gap: 12px; }
-.list-scroll { max-height: 520px; overflow: auto; border-radius: 8px; }
+.list-scroll { max-height: 520px; overflow: auto; border-radius: 8px; position: relative; }
 .list-scroll table { box-shadow: none; border-radius: 0; }
