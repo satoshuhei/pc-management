@@ -18,6 +18,7 @@
     </div>
     <form method="get" class="form">
       <div class="filter-row">
+        <button type="submit" class="button">検索</button>
         <label>
           状態
           <input type="text" name="status" value="{{ filters.status }}" placeholder="INV/READY..." />
@@ -30,9 +31,6 @@
           場所
           <input type="text" name="location" value="{{ filters.location }}" />
         </label>
-      </div>
-      <div class="form-actions">
-        <button type="submit" class="button">検索</button>
       </div>
     </form>
 
@@ -52,7 +50,7 @@
       <span class="summary">件数: {{ assets | length }}</span>
     </div>
     <div class="list-scroll">
-      <table>
+      <table class="compact-table">
         <thead>
           <tr><th>ID</th><th>資産No</th><th>状態</th><th>利用者</th><th>場所</th><th>状態遷移</th></tr>
         </thead>

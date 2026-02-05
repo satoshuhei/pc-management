@@ -32,8 +32,10 @@ input, select, textarea { border: 1px solid #ccd3de; border-radius: 6px; padding
 .assets-layout { display: flex; flex-direction: column; gap: 16px; }
 .filter-panel { max-width: none; }
 .filter-header h2 { margin: 0 0 8px; }
-.filter-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; align-items: end; }
+.filter-row { display: grid; grid-template-columns: auto repeat(3, minmax(0, 220px)); column-gap: 8px; row-gap: 8px; align-items: end; justify-content: start; }
 .filter-row label { margin: 0; }
+.filter-row .button { margin-bottom: 2px; }
+.compact-table th, .compact-table td { padding: 6px 10px; }
 .panel-section { margin-top: 16px; padding-top: 12px; border-top: 1px solid #e6e9ef; }
 .list-panel { display: flex; flex-direction: column; gap: 8px; }
 .list-header { display: flex; align-items: baseline; justify-content: flex-end; gap: 12px; }
