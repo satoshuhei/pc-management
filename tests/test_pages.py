@@ -193,6 +193,8 @@ def test_assets_layout_redmine_style():
     assert "資産No" in res.text
     assert "filter-field" in res.text
     assert "チケット一覧" not in res.text
+    assert res.text.count("件数:") == 1
+    assert "（未実装）" in res.text
     assert "list-scroll" in res.text
     assert "compact-table" in res.text
     assert "table-header" in res.text
