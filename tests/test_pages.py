@@ -194,6 +194,7 @@ def test_assets_layout_redmine_style():
     assert "チケット一覧" not in res.text
     assert "list-scroll" in res.text
     assert "compact-table" in res.text
+    assert "sticky-header" in res.text
     assert res.text.index("検索") < res.text.index("状態")
     assert res.text.index("list-scroll") < res.text.index("インポート")
     app.dependency_overrides.clear()
