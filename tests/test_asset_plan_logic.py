@@ -1,7 +1,7 @@
 from datetime import date, timedelta
 
 from app.models import PcPlan, PlanStatus
-from app.routes.assets import _has_overdue_plan, _has_today_plan, _select_next_plan
+from app.routes.assets import _has_overdue_plan, _has_today_plan, _select_next_plans
 
 
 def _plan(
@@ -32,10 +32,11 @@ def test_select_next_plan_uses_min_date_and_ignores_null():
         _plan(2, today + timedelta(days=2), PlanStatus.PLANNED),
         _plan(3, today + timedelta(days=1), PlanStatus.DONE),
         _plan(4, today, PlanStatus.PLANNED),
+        _plan(5, today + timedelta(days=3), PlanStatus.PLANNED),
+        _plan(6, today + timedelta(days=4), PlanStatus.PLANNED),
     ]
-    selected = _select_next_plan(plans)
-    assert selected is not None
-    assert selected.id == 4
+    selected = _select_next_plans(plans, limit=3)
+    assert [plan.id for plan in selected] == [4, 2, 5]
 
 
 def test_overdue_and_today_flags():

@@ -65,12 +65,12 @@ def _build_assets_context(
             plans_by_asset.setdefault(plan.entity_id, []).append(plan)
 
     today = date.today()
-    next_plans: dict[int, PcPlan | None] = {}
+    next_plans: dict[int, list[PcPlan]] = {}
     overdue_flags: dict[int, bool] = {}
     today_flags: dict[int, bool] = {}
 
     for asset_id, plans in plans_by_asset.items():
-        next_plans[asset_id] = _select_next_plan(plans)
+        next_plans[asset_id] = _select_next_plans(plans, limit=3)
         overdue_flags[asset_id] = _has_overdue_plan(plans, today)
         today_flags[asset_id] = _has_today_plan(plans, today)
 
@@ -88,7 +88,7 @@ def _build_assets_context(
 
     if filtered_assets is not assets:
         asset_ids = [asset.id for asset in filtered_assets]
-        next_plans = {asset_id: next_plans.get(asset_id) for asset_id in asset_ids}
+        next_plans = {asset_id: next_plans.get(asset_id, []) for asset_id in asset_ids}
         overdue_flags = {asset_id: overdue_flags.get(asset_id, False) for asset_id in asset_ids}
         today_flags = {asset_id: today_flags.get(asset_id, False) for asset_id in asset_ids}
 
@@ -133,15 +133,16 @@ def _parse_date(value: str | None) -> date | None:
         return None
 
 
-def _select_next_plan(plans: list[PcPlan]) -> PcPlan | None:
+def _select_next_plans(plans: list[PcPlan], *, limit: int = 3) -> list[PcPlan]:
     candidates = [
         plan
         for plan in plans
         if plan.plan_status == PlanStatus.PLANNED and plan.planned_date is not None
     ]
     if not candidates:
-        return None
-    return sorted(candidates, key=lambda plan: (plan.planned_date, plan.id or 0))[0]
+        return []
+    ordered = sorted(candidates, key=lambda plan: (plan.planned_date, plan.id or 0))
+    return ordered[:limit]
 
 
 def _has_overdue_plan(plans: list[PcPlan], today: date) -> bool:

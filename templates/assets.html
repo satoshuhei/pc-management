@@ -99,7 +99,7 @@
         </colgroup>
         <tbody>
           {% for asset in assets %}
-            {% set next_plan = next_plans.get(asset.id) %}
+            {% set upcoming_plans = next_plans.get(asset.id, []) %}
             <tr>
               <td><a href="/assets/{{ asset.id }}">{{ asset.asset_tag }}</a></td>
               <td>{{ asset.hostname or "" }}</td>
@@ -110,10 +110,14 @@
               <td>{{ asset.current_user or "" }}</td>
               <td>{{ asset.location or "" }}</td>
               <td>
-                {% if next_plan %}
-                  <div class="next-plan-date">{{ next_plan.planned_date }}</div>
-                  <div class="next-plan-title">{{ next_plan.title }}</div>
-                  <div class="next-plan-owner">{{ next_plan.planned_owner or "" }}</div>
+                {% if upcoming_plans %}
+                  {% for plan in upcoming_plans %}
+                    <div class="next-plan-row">
+                      <span class="next-plan-date">{{ plan.planned_date }}</span>
+                      <span class="next-plan-title">{{ plan.title }}</span>
+                      <span class="next-plan-owner">{{ plan.planned_owner or "" }}</span>
+                    </div>
+                  {% endfor %}
                 {% else %}
                   <span class="muted">予定なし</span>
                 {% endif %}
@@ -141,7 +145,8 @@
                       <button type="submit" class="button">保存</button>
                     </form>
                   </details>
-                  {% if next_plan %}
+                  {% if upcoming_plans %}
+                    {% set next_plan = upcoming_plans[0] %}
                     <details class="action-details">
                       <summary>次予定を完了</summary>
                       <form method="post" action="/assets/{{ asset.id }}/plans/{{ next_plan.id }}/done" class="inline-form">
